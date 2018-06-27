@@ -33,8 +33,33 @@ for(var i = 0; i < radiusCircle.length; i++) {
   c.arc(widthPosition, 300, radiusCircle[i], 0, Math.PI * 2, false);
   c.fill();
   c.stroke();
-
 }
+
+c.beginPath();
+c.strokeStyle = "red";
+c.moveTo(140, 220);
+c.bezierCurveTo(140, 200, 50, 210, 50, 225);
+c.bezierCurveTo(55, 220, 110, 220, 145, 255);
+c.lineTo(145, 260);
+c.lineTo(140, 260);
+c.bezierCurveTo(135, 250, 110, 240, 105, 243);
+c.lineTo(140, 288);
+c.moveTo(95, 295);
+c.lineTo(180, 280);
+c.moveTo(95, 295);
+c.lineTo(95, 305);
+c.moveTo(95, 305);
+c.lineTo(180, 320);
+c.lineTo(182, 325);
+c.lineTo(360, 325);
+c.bezierCurveTo(340, 300, 360, 250, 380, 240);
+c.lineTo(415, 307);
+c.lineTo(428, 300);
+c.lineTo(395, 232);
+c.bezierCurveTo(395, 232, 410, 220, 440, 230);
+c.bezierCurveTo(480, 240, 370, 110, 350, 120);
+c.bezierCurveTo(480, 240, 400, 200, 400, 200);
+c.stroke();
 
 
 // c.lineTo(120, 250);
