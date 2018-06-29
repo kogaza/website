@@ -4,23 +4,23 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var motX = -300;
-var speed = 5;
+var motY = 100;
+var speed = 3;
 
-//wheels
 var moto = canvas.getContext('2d');
 var radiusCircle = [55, 30, 10, 1, 55, 45, 33, 25, 10, 1];
 
-
-function motobike() {
-  requestAnimationFrame(motobike);
+function motorbike() {
+  requestAnimationFrame(motorbike);
 
   moto.clearRect(0, 0, innerWidth, innerHeight);
 
+  //wheels
   for (var i = 0; i < radiusCircle.length; i++) {
     moto.beginPath();
     i % 2 == 0 ? ((i == 2 || i == 6 || i == 8) ? moto.fillStyle = "rgb(200, 200, 200)" : moto.fillStyle = "black") : moto.fillStyle = "white";
     i < 4 ? widthPosition = motX : widthPosition = motX + 290;
-    moto.arc(widthPosition, 300, radiusCircle[i], 0, Math.PI * 2, false);
+    moto.arc(widthPosition, motY + 200, radiusCircle[i], 0, Math.PI * 2, false);
     moto.fill();
     moto.stroke();
   }
@@ -28,43 +28,67 @@ function motobike() {
   moto.beginPath();
   moto.strokeStyle = "gray";
   moto.fillStyle = 'rgb(70, 70, 70)';
-  moto.moveTo(motX + 230, 210);
-  moto.bezierCurveTo(motX + 210, 190, motX + 120, 200, motX + 110, 220);
-  moto.moveTo(motX + 230, 210);
-  moto.bezierCurveTo(motX + 210, 270, motX + 120, 240, motX + 110, 220);
+  //bak
+  moto.moveTo(motX + 230, motY + 110);
+  moto.bezierCurveTo(motX + 210, motY + 90, motX + 120, motY + 100, motX + 110, motY + 120);
+  moto.moveTo(motX + 230, motY + 110);
+  moto.bezierCurveTo(motX + 210, motY + 170, motX + 120, motY + 140, motX + 110, motY + 120);
   moto.fill();
-  moto.bezierCurveTo(motX + 120, 250, motX + 40, 230, motX + 40, 220);
-  moto.bezierCurveTo(motX + 40, 200, motX - 50, 210, motX - 50, 225);
-  moto.bezierCurveTo(motX - 45, 220, motX + 10, 220, motX + 45, 255);
-  moto.lineTo(motX + 45, 260);
-  moto.lineTo(motX + 40, 260);
-  moto.bezierCurveTo(motX + 35, 250, motX + 10, 240, motX + 5, 243);
-  moto.lineTo(motX + 40, 288);
+  //tył
+  moto.bezierCurveTo(motX + 120, motY + 150, motX + 40, motY + 130, motX + 40, motY + 120);
+  moto.bezierCurveTo(motX + 40, motY + 100, motX - 50, motY + 110, motX - 50, motY + 125);
+  moto.bezierCurveTo(motX - 45, motY + 120, motX + 10, motY + 120, motX + 45, motY + 155);
+  moto.lineTo(motX + 45, motY + 160);
+  moto.lineTo(motX + 40, motY + 160);
+  //nadkole tył
+  moto.bezierCurveTo(motX + 35, motY + 150, motX + 10, motY + 140, motX + 5, motY + 143);
+  //dół
+  moto.lineTo(motX + 40, motY + 188);
   moto.moveTo(motX - 5, 295);
-  moto.lineTo(motX + 80, 280);
+  moto.lineTo(motX + 80, motY + 180);
   moto.moveTo(motX - 5, 295);
-  moto.lineTo(motX - 5, 305);
-  moto.lineTo(motX + 80, 320);
-  moto.lineTo(motX + 82, 325);
-  moto.lineTo(motX + 230, 325);
-  moto.bezierCurveTo(motX + 210, 300, motX + 230, 250, motX + 250, 240);
-  moto.lineTo(motX + 285, 307);
-  moto.lineTo(motX + 298, 300);
-  moto.lineTo(motX + 265, 232);
-  moto.bezierCurveTo(motX + 265, 232, motX + 280, 220, motX + 310, 230);
-  moto.bezierCurveTo(motX + 350, 240, motX + 240, 110, motX + 220, 120);
-  moto.bezierCurveTo(motX + 350, 240, motX + 260, 200, motX + 270, 200);
-  moto.bezierCurveTo(motX + 250, 190, motX + 230, 200, motX + 230, 210);
+  moto.lineTo(motX - 5, motY + 205);
+  moto.lineTo(motX + 80, motY + 220);
+  moto.lineTo(motX + 82, motY + 225);
+  moto.lineTo(motX + 230, motY + 225);
+  //przód łuk
+  moto.bezierCurveTo(motX + 210, motY + 200, motX + 230, motY + 150, motX + 250, motY + 140);
+  //amortyzator przód
+  moto.lineTo(motX + 285, motY + 207);
+  moto.lineTo(motX + 298, motY + 200);
+  moto.lineTo(motX + 265, motY + 132);
+  //szyba
+  moto.bezierCurveTo(motX + 265, motY + 132, motX + 280, motY + 120, motX + 310, motY + 130);
+  moto.bezierCurveTo(motX + 350, motY + 140, motX + 240, motY + 10, motX + 220, motY + 20);
+  moto.bezierCurveTo(motX + 350, motY + 140, motX + 260, motY + 100, motX + 270, motY + 100);
+  moto.bezierCurveTo(motX + 250, motY + 90, motX + 230, motY + 100, motX + 230, motY + 110);
+  //błotnik przód
   moto.moveTo(motX + 295, 295);
-  moto.bezierCurveTo(motX + 290, 270, motX + 280, 260, motX + 310, 245);
-  moto.bezierCurveTo(motX + 310, 245, motX + 300, 240, motX + 270, 245);
+  moto.bezierCurveTo(motX + 290, motY + 170, motX + 280, motY + 160, motX + 310, motY + 145);
+  moto.bezierCurveTo(motX + 310, motY + 145, motX + 300, motY + 140, motX + 270, motY + 145);
   moto.fill();
   moto.stroke();
 
-  motX += 1;
+  motX > innerWidth-400 ? speed = 0 : speed;
+  motX += speed;
 }
 
-motobike();
+var ball = canvas.getContext('2d');
+var ballX = 100;
+var ballY = 600;
+function ballAnimation() {
+  requestAnimationFrame(ballAnimation);
+  console.log('działa');
+  ball.beginPath();
+  ball.arc(ballX, ballY, 20, 0, Math.PI * 2, false);
+  ball.stroke();
+
+  ballX += 3;
+  
+}
+
+motorbike();
+ballAnimation();
 
 
 
