@@ -9,7 +9,7 @@ var wheelX = 50;
 var wheelY = 50;
 var speed = 3;
 var speedWheel = 0.2;
-var brake = innerWidth - 400; 
+var brake = innerWidth - 400;
 
 var context = canvas.getContext('2d');
 var radiusCircle = [53, 30, 10, 1, 53, 45, 33, 25, 10, 1];
@@ -20,19 +20,19 @@ function Wheel(x, y, wheelX, wheelY, alfa) {
   this.wheelX = wheelX;
   this.wheelY = wheelY;
   this.alfa = alfa;
-  
-  this.draw = function() {
+
+  this.draw = function () {
     context.beginPath();
     context.strokeStyle = "black";
     context.fillStyle = "black";
-    context.arc(this.x + this.wheelX*Math.cos(Math.PI/36 * this.alfa), 
-                this.y + this.wheelY*Math.sin(Math.PI/36 * this.alfa),
-                5, 0, Math.PI * 2, false);
+    context.arc(this.x + this.wheelX * Math.cos(Math.PI / 36 * this.alfa),
+      this.y + this.wheelY * Math.sin(Math.PI / 36 * this.alfa),
+      5, 0, Math.PI * 2, false);
     context.fill();
     context.stroke();
   }
 
-  this.update = function() {
+  this.update = function () {
     this.alfa += speedWheel;
     this.x += speed;
     motX > brake ? speedWheel = 0 : speedWheel;
@@ -46,22 +46,22 @@ function wheel() {
   wheelsArray1 = [];
   wheelsArray2 = [];
   var numberOfPoint = 48;
-  
-  for(var i = 0; i < numberOfPoint; i++) {
-    var alfaP = Math.PI - 360/numberOfPoint*(4-i);
-    wheelsArray1.push(new Wheel(motX+290-4,motY+200,wheelX+2,wheelY+2,alfaP));
-    wheelsArray2.push(new Wheel(motX-4,motY+200,wheelX+2,wheelY+2,alfaP));
+
+  for (var i = 0; i < numberOfPoint; i++) {
+    var alfaP = Math.PI - 360 / numberOfPoint * (4 - i);
+    wheelsArray1.push(new Wheel(motX + 290 - 4, motY + 200, wheelX + 2, wheelY + 2, alfaP));
+    wheelsArray2.push(new Wheel(motX - 4, motY + 200, wheelX + 2, wheelY + 2, alfaP));
   }
   motorbike();
 }
 
 function motorbike() {
   requestAnimationFrame(motorbike);
-  
+
   context.clearRect(0, 0, innerWidth, innerHeight);
-  
+
   //rotate wheels
-  for(var i = 0; i < wheelsArray1.length; i++){
+  for (var i = 0; i < wheelsArray1.length; i++) {
     wheelsArray1[i].update(); //wheel.update
     wheelsArray2[i].update(); //wheel.update
   }
@@ -74,7 +74,7 @@ function motorbike() {
     context.arc(widthPosition, motY + 200, radiusCircle[i], 0, Math.PI * 2, false);
     context.fill();
     context.stroke();
-    
+
   }
   //chassis
   context.beginPath();
@@ -120,13 +120,10 @@ function motorbike() {
   context.bezierCurveTo(motX + 310, motY + 145, motX + 300, motY + 140, motX + 270, motY + 145);
   context.fill();
   context.stroke();
-  
-  
+
   motX > brake ? speed = 0 : speed;
   motX += speed;
-
 }
-
 wheel();
 
 
