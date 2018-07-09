@@ -1,10 +1,10 @@
 var canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = 300;
 
-var motX = -300;
-var motY = 100;
+var motX = -400;
+var motY = 0;
 var wheelX = 50;
 var wheelY = 50;
 var speed = 3;
@@ -96,9 +96,9 @@ function motorbike() {
   context.bezierCurveTo(motX + 35, motY + 150, motX + 10, motY + 140, motX + 5, motY + 143);
   //dół
   context.lineTo(motX + 40, motY + 188);
-  context.moveTo(motX - 5, 295);
+  context.moveTo(motX - 5, motY + 195);
   context.lineTo(motX + 80, motY + 180);
-  context.moveTo(motX - 5, 295);
+  context.moveTo(motX - 5, motY + 195);
   context.lineTo(motX - 5, motY + 205);
   context.lineTo(motX + 80, motY + 220);
   context.lineTo(motX + 82, motY + 225);
@@ -115,9 +115,44 @@ function motorbike() {
   context.bezierCurveTo(motX + 350, motY + 140, motX + 260, motY + 100, motX + 270, motY + 100);
   context.bezierCurveTo(motX + 250, motY + 90, motX + 230, motY + 100, motX + 230, motY + 110);
   //błotnik przód
-  context.moveTo(motX + 295, 295);
-  context.bezierCurveTo(motX + 290, motY + 170, motX + 280, motY + 160, motX + 310, motY + 145);
-  context.bezierCurveTo(motX + 310, motY + 145, motX + 300, motY + 140, motX + 270, motY + 145);
+  context.moveTo(motX + 295, motY + 195);
+  context.bezierCurveTo(motX + 290, motY + 170, motX + 280, motY + 150, motX + 312, motY + 143);
+  context.bezierCurveTo(motX + 310, motY + 145, motX + 300, motY + 135, motX + 270, motY + 143);
+  context.fill();
+  context.stroke();
+  //kierownica
+  context.beginPath();
+  context.fillStyle = "red";
+  context.moveTo(motX + 245, motY + 97);
+  context.lineTo(motX + 250, motY + 96);
+  context.lineTo(motX + 240, motY + 120);
+  context.lineTo(motX + 235, motY + 122);
+  context.lineTo(motX + 245, motY + 97);
+  context.fill();
+  context.stroke();
+  //motocyklista bez kasku
+  context.beginPath();
+  context.strokeStyle = 'rgb(225,225,25)';
+  context.fillStyle = 'rgb(225,125,25)';
+  context.moveTo(motX + 77, motY + 92);
+  context.bezierCurveTo(motX + 50, motY + 130, motX + 60, motY + 125, motX + 145, motY + 145);
+  context.lineTo(motX + 110, motY + 190);
+  context.bezierCurveTo(motX + 100, motY + 190, motX + 88, motY + 195, motX + 110, motY + 210);
+  context.lineTo(motX + 130, motY + 220);
+  context.bezierCurveTo(motX + 140, motY + 225, motX + 145, motY + 215, motX + 135, motY + 205);
+  context.bezierCurveTo(motX + 135, motY + 205, motX + 120, motY + 190, motX + 130, motY + 190);
+  context.lineTo(motX + 170, motY + 145);
+  context.bezierCurveTo(motX + 175, motY + 125, motX + 150, motY + 110, motX + 130, motY + 105);
+  context.lineTo(motX + 160, motY + 85);
+  context.bezierCurveTo(motX + 160, motY + 110, motX + 150, motY + 130, motX + 235, motY + 110);
+  context.bezierCurveTo(motX + 235, motY + 110, motX + 250, motY + 110, motX + 242, motY + 115);
+  context.bezierCurveTo(motX + 247, motY + 120, motX + 260, motY + 100, motX + 242, motY + 100);
+  context.lineTo(motX + 235, motY + 103);
+  context.lineTo(motX + 180, motY + 100);
+  context.bezierCurveTo(motX + 180, motY + 100, motX + 186, motY + 70, motX + 185, motY + 70);
+  context.bezierCurveTo(motX + 185, motY + 65, motX + 175, motY + 63, motX + 175, motY + 65);
+  context.bezierCurveTo(motX + 175, motY + 65, motX + 150, motY + 50, motX + 150, motY + 45);
+  context.bezierCurveTo(motX + 145, motY + 45, motX + 90, motY + 75, motX + 77, motY + 92);
   context.fill();
   context.stroke();
 
