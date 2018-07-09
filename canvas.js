@@ -111,7 +111,7 @@ function motorbike() {
   context.lineTo(motX + 265, motY + 132);
   //szyba
   context.bezierCurveTo(motX + 265, motY + 132, motX + 280, motY + 120, motX + 310, motY + 130);
-  context.bezierCurveTo(motX + 350, motY + 140, motX + 240, motY + 10, motX + 220, motY + 20);
+  context.bezierCurveTo(motX + 350, motY + 140, motX + 270, motY + 40, motX + 250, motY + 50);
   context.bezierCurveTo(motX + 350, motY + 140, motX + 260, motY + 100, motX + 270, motY + 100);
   context.bezierCurveTo(motX + 250, motY + 90, motX + 230, motY + 100, motX + 230, motY + 110);
   //błotnik przód
@@ -122,7 +122,7 @@ function motorbike() {
   context.stroke();
   //kierownica
   context.beginPath();
-  context.fillStyle = "red";
+  context.fillStyle = "black";
   context.moveTo(motX + 245, motY + 97);
   context.lineTo(motX + 250, motY + 96);
   context.lineTo(motX + 240, motY + 120);
