@@ -134,16 +134,16 @@ function motorbike() {
   context.beginPath();
   context.strokeStyle = 'rgb(225,225,25)';
   context.fillStyle = 'rgb(225,125,25)';
-  context.moveTo(motX + 77, motY + 92);
-  context.bezierCurveTo(motX + 50, motY + 130, motX + 60, motY + 125, motX + 145, motY + 145);
-  context.lineTo(motX + 110, motY + 190);
-  context.bezierCurveTo(motX + 100, motY + 190, motX + 88, motY + 195, motX + 110, motY + 210);
-  context.lineTo(motX + 130, motY + 220);
-  context.bezierCurveTo(motX + 140, motY + 225, motX + 145, motY + 215, motX + 135, motY + 205);
-  context.bezierCurveTo(motX + 135, motY + 205, motX + 120, motY + 190, motX + 130, motY + 190);
-  context.lineTo(motX + 170, motY + 145);
-  context.bezierCurveTo(motX + 175, motY + 125, motX + 150, motY + 110, motX + 130, motY + 105);
-  context.lineTo(motX + 160, motY + 85);
+  context.moveTo(motX + 77, motY + 102);
+  context.bezierCurveTo(motX + 50, motY + 140, motX + 60, motY + 135, motX + 145, motY + 155);
+  context.lineTo(motX + 110, motY + 200);
+  context.bezierCurveTo(motX + 100, motY + 200, motX + 88, motY + 205, motX + 110, motY + 220);
+  context.lineTo(motX + 130, motY + 230);
+  context.bezierCurveTo(motX + 140, motY + 235, motX + 145, motY + 225, motX + 135, motY + 215);
+  context.bezierCurveTo(motX + 135, motY + 215, motX + 120, motY + 200, motX + 130, motY + 200);
+  context.lineTo(motX + 170, motY + 155);
+  context.bezierCurveTo(motX + 175, motY + 135, motX + 150, motY + 120, motX + 130, motY + 115);
+  context.lineTo(motX + 160, motY + 95);
   context.bezierCurveTo(motX + 160, motY + 110, motX + 150, motY + 130, motX + 235, motY + 110);
   context.bezierCurveTo(motX + 235, motY + 110, motX + 250, motY + 110, motX + 242, motY + 115);
   context.bezierCurveTo(motX + 247, motY + 120, motX + 260, motY + 100, motX + 242, motY + 100);
@@ -152,7 +152,7 @@ function motorbike() {
   context.bezierCurveTo(motX + 180, motY + 100, motX + 186, motY + 70, motX + 185, motY + 70);
   context.bezierCurveTo(motX + 185, motY + 65, motX + 175, motY + 63, motX + 175, motY + 65);
   context.bezierCurveTo(motX + 175, motY + 65, motX + 150, motY + 50, motX + 150, motY + 45);
-  context.bezierCurveTo(motX + 145, motY + 45, motX + 90, motY + 75, motX + 77, motY + 92);
+  context.bezierCurveTo(motX + 145, motY + 55, motX + 90, motY + 85, motX + 77, motY + 102);
   context.fill();
   context.stroke();
   //kask
