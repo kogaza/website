@@ -155,6 +155,21 @@ function motorbike() {
   context.bezierCurveTo(motX + 145, motY + 45, motX + 90, motY + 75, motX + 77, motY + 92);
   context.fill();
   context.stroke();
+  //kask
+  context.beginPath();
+  context.strokeStyle='red';
+  context.fillStyle='rgb(225, 210, 10)';
+  context.moveTo(motX + 155, motY + 55);
+  context.bezierCurveTo(motX + 155, motY + 54, motX + 160, motY + 37, motX + 160, motY + 35);
+  context.bezierCurveTo(motX + 158, motY + 30, motX + 163, motY + 33, motX + 163, motY + 33);
+  context.bezierCurveTo(motX + 180, motY + 25, motX + 210, motY + 20, motX + 210, motY + 50);
+  context.bezierCurveTo(motX + 210, motY + 65, motX + 200, motY + 80, motX + 195, motY + 80);
+  context.bezierCurveTo(motX + 185, motY + 70, motX + 163, motY + 55, motX + 155, motY + 55);
+  context.moveTo(motX + 210, motY + 50);
+  context.bezierCurveTo(motX + 170, motY + 30, motX + 208, motY + 63, motX + 208, motY + 63);
+  
+  context.fill();
+  context.stroke();  
 
   motX > brake ? speed = 0 : speed;
   motX += speed;
