@@ -7,9 +7,9 @@ var motX = -400;
 var motY = 0;
 var wheelX = 50;
 var wheelY = 50;
-var speed = 3;
+var speed = 8;
 var speedWheel = 0.2;
-var brake = innerWidth - 400;
+var brake = innerWidth + 200;
 
 var context = canvas.getContext('2d');
 var radiusCircle = [53, 30, 10, 1, 53, 45, 33, 25, 10, 1];
@@ -49,8 +49,8 @@ function wheel() {
 
   for (var i = 0; i < numberOfPoint; i++) {
     var alfaP = Math.PI - 360 / numberOfPoint * (4 - i);
-    wheelsArray1.push(new Wheel(motX + 290 - 4, motY + 200, wheelX + 2, wheelY + 2, alfaP));
-    wheelsArray2.push(new Wheel(motX - 4, motY + 200, wheelX + 2, wheelY + 2, alfaP));
+    wheelsArray1.push(new Wheel(motX + 290 - 8, motY + 200, wheelX + 2, wheelY + 2, alfaP));
+    wheelsArray2.push(new Wheel(motX - 8, motY + 200, wheelX +2, wheelY +2, alfaP));
   }
   motorbike();
 }

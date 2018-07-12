@@ -5,6 +5,63 @@
   margin: 0;
   padding: 0;
 }
-canvas {
-  border: 1px solid red;
+.page {
+  width: 1024px;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  padding: 10px;
+}
+#about-me article {
+  width: 40%;
+  height: 400px; 
+  margin: 5%;
+  border: 1px solid green;
+  font-size: 20px;
+  text-align: center;
+  padding: 2%;
+}
+#picture {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  padding: 20px;
+  background: grey;
+  background-image: url('../images/cv.jpg');
+  background-size: cover;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+#projects {
+  animation: projects 3.2s linear both 0.7s;
+  /* animation-name: projects; */
+  /* animation-duration: 8.3s; */
+  /* animation-fill-mode: both; */
+  /* animation-delay: 1.8s; */
+  /* animation-timing-function: linear; */
+}
+#projects article {
+  padding: 2%;
+  width: 33.33%;
+  cursor: pointer;
+}
+#projects article:first-child {
+  width: 100%;
+  text-align: center;
+}
+@keyframes projects {
+  from {transform: translate(-1500px, -300px)}
+  to {transform: translate(0, -300px)}
 }
