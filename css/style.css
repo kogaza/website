@@ -27,7 +27,7 @@ nav li {
   text-align: center;
   color: #E84A6A;
   /* background-color: #D2FFED; */
-  background-image: linear-gradient(to right top, #4feeae, #76f3bf, #97f7cf, #b5fbdf, #d2ffed);
+  background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
   padding: 5px;
   border: 2px solid #267DE8;
   border-radius: 5px;
@@ -38,7 +38,7 @@ nav li {
 }
 nav li:hover {
   /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #ffd9b7, #ffe3cb);  border: 3px solid #9837FF;
+background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);  border: 3px solid #9837FF;
   color: #267DE8;
   padding: 4px 0;
   border-radius: 15px;
@@ -137,7 +137,8 @@ nav li:nth-child(3) {
   flex-direction: row;
   justify-content: space-around;
   /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #ffd9b7, #ffe3cb);  animation: about-me 0.5s linear both 4.5s;
+background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);
+animation: about-me 0.5s linear both 4.5s;
 }
 @keyframes about-me {
   0% {
@@ -167,7 +168,7 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #f
   width: 1024px;
   margin: 0 auto;
   padding-bottom: 10px;
-  animation: projects 2.1s linear both 0.5s,
+  animation: projects 2.1s linear both 0.7s,
              background-projects 0.3s linear both 4s;
 }
 @keyframes projects {
@@ -176,7 +177,7 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #f
 }
 @keyframes background-projects {
   from{background-color: rgba(210,255,237,0)}
-  to{background-image: linear-gradient(to right top, #4feeae, #76f3bf, #97f7cf, #b5fbdf, #d2ffed);}
+  to{background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);}
 }
 .project-aboutme {
   animation: project-aboutme 0.5s linear forwards;
@@ -220,14 +221,14 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #f
   }
 }
 .projects article:nth-child(3){
-  animation: second-project 0.8s linear both 2.6s;
+  animation: second-project 0.8s linear both 2.8s;
 }
 @keyframes second-project {
   0%{transform: translate(-300px,20px)}
   100%{transform: translate(0,0)}
 }
 .projects article:nth-child(4){
-  animation: third-project 1.6s linear both 2.6s;
+  animation: third-project 1.6s linear both 2.8s;
 }
 @keyframes third-project {
   0%{transform: translate(-600px,40px)}
@@ -245,7 +246,7 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #f
   line-height: 30px;
   top: -571px;
   /* background-color: rgba(210,255,237,1); */
-  background-image: linear-gradient(to right top, #4feeae, #76f3bf, #97f7cf, #b5fbdf, #d2ffed);
+  background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
   padding: 16px;
   transform: scale(0);
 }
@@ -270,7 +271,7 @@ footer {
   justify-content: space-around;
 }
 footer div {
-  width: 20%;
+  width: 22%;
   text-align: center;
 }
 footer div:nth-child(1) {
@@ -390,10 +391,10 @@ footer div:nth-child(4) {
 }
 footer div a {
   /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #ffd9b7, #ffe3cb);  border: 2px solid #267DE8;
+background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);  border: 2px solid #267DE8;
   border-radius: 5px;
   cursor: pointer;
-  padding: 10px 0;
+  padding: 3px 0;
   text-decoration: none;
   color: #E84A6A;
   transition: 1s;
@@ -401,10 +402,10 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc48f, #ffcea2, #f
 
 footer a:hover {
   /* background-color: #D2FFED; */
-  background-image: linear-gradient(to right top, #4feeae, #76f3bf, #97f7cf, #b5fbdf, #d2ffed);
+  background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
   border: 3px solid #9837FF;
   color: #267DE8;
-  padding: 9px 0;
+  padding: 2px 0;
   border-radius: 15px;
   transition: 0.5s;
 }
