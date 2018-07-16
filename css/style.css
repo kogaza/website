@@ -26,7 +26,6 @@ nav ul {
 nav li {
   text-align: center;
   color: #E84A6A;
-  /* background-color: #D2FFED; */
   background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
   padding: 5px;
   border: 2px solid #267DE8;
@@ -37,8 +36,7 @@ nav li {
   cursor: pointer;
 }
 nav li:hover {
-  /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);  border: 3px solid #9837FF;
+  background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);  border: 3px solid #9837FF;
   color: #267DE8;
   padding: 4px 0;
   border-radius: 15px;
@@ -136,9 +134,8 @@ nav li:nth-child(3) {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);
-animation: about-me 0.5s linear both 4.5s;
+  background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);
+  animation: about-me 0.5s linear both 4.5s;
 }
 @keyframes about-me {
   0% {
@@ -169,7 +166,7 @@ animation: about-me 0.5s linear both 4.5s;
   margin: 0 auto;
   padding-bottom: 10px;
   animation: projects 2.1s linear both 0.7s,
-             background-projects 0.3s linear both 4s;
+             background-projects 0.6s linear both 4.5s;
 }
 @keyframes projects {
   from {transform: translateX(-1000px)}
@@ -179,14 +176,9 @@ animation: about-me 0.5s linear both 4.5s;
   from{background-color: rgba(210,255,237,0)}
   to{background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);}
 }
-.project-aboutme {
-  animation: project-aboutme 0.5s linear forwards;
-}
-@keyframes project-aboutme {
-  from {transform: scale(1)}
-  to {transform: scale(0)}
-}
+
 .projects article {
+  overflow: hidden;
   margin: 1%;
   width: 31.33%;
   border: 2px solid #267DE8;
@@ -194,8 +186,11 @@ animation: about-me 0.5s linear both 4.5s;
   cursor: pointer;
   transition: 1s;
 }
-.projects article:hover {
-  border: 3px solid #9837FF;
+.projects a{
+  transition: 1s;
+}
+.projects article a:hover {
+  transform: scale(1.1);
   transition: 0.5s;
 }
 .projects article:nth-child(1) {
@@ -204,7 +199,7 @@ animation: about-me 0.5s linear both 4.5s;
   border: 0;
 }
 .projects h2 {
-  animation: my-projects 0.3s linear both 4s;
+  animation: my-projects 0.3s linear both 5s;
 }
 @keyframes my-projects {
   0% {
@@ -245,14 +240,11 @@ animation: about-me 0.5s linear both 4.5s;
   position: relative;
   line-height: 30px;
   top: -571px;
-  /* background-color: rgba(210,255,237,1); */
   background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
   padding: 16px;
   transform: scale(0);
 }
-.project-skills {
-  animation: project-aboutme 0.5s linear forwards reverse 0.5s;
-}
+
 .skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -272,10 +264,12 @@ footer {
 }
 footer div {
   width: 22%;
+  height: 50px;
   text-align: center;
+  transition: 2s;
 }
 footer div:nth-child(1) {
-  animation: contacts1 1s linear both 4s;
+  animation: contacts1 1s linear both 5s;
 }
 @keyframes contacts1 {
   0% {
@@ -303,7 +297,7 @@ footer div:nth-child(1) {
   }
 }
 footer div:nth-child(2) {
-  animation: contacts2 1s linear both 4s;
+  animation: contacts2 1s linear both 5s;
 }
 @keyframes contacts2 {
   0% {
@@ -332,7 +326,7 @@ footer div:nth-child(2) {
   }
 }
 footer div:nth-child(3) {
-  animation: contacts3 1s linear both 4s;
+  animation: contacts3 1s linear both 5s;
 }
 @keyframes contacts3 {
   0% {
@@ -361,7 +355,7 @@ footer div:nth-child(3) {
   }
 }
 footer div:nth-child(4) {
-  animation: contacts4 1s linear both 4s;
+  animation: contacts4 1s linear both 5s;
 }
 @keyframes contacts4 {
   0% {
@@ -390,8 +384,8 @@ footer div:nth-child(4) {
   }
 }
 footer div a {
-  /* background-color: #FFE3CB; */
-background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf);  border: 2px solid #267DE8;
+  background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #ffe0c5, #fdeddf); 
+  border: 2px solid #267DE8;
   border-radius: 5px;
   cursor: pointer;
   padding: 3px 0;
@@ -401,11 +395,190 @@ background-image: linear-gradient(to right bottom, #ffb97b, #ffc693, #ffd3ac, #f
 }
 
 footer a:hover {
-  /* background-color: #D2FFED; */
   background-image: linear-gradient(to right top, #4feeae, #78f3c0, #9af7d0, #b9fae0, #d7fdee);
-  border: 3px solid #9837FF;
+  border-color: #9837FF;
   color: #267DE8;
-  padding: 2px 0;
   border-radius: 15px;
   transition: 0.5s;
+}
+
+.contact-move1 {
+  animation: contact-move1 2s linear forwards 0.3s; 
+}
+@keyframes contact-move1 {
+  0% {
+    height: 100%;
+    transform: translate(0,0);
+  }
+  33% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0,-500px);
+  }
+  66% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(255px, -500px);
+  }
+  100% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(205px, -550px)
+               scale(1.5);
+  }
+}
+.contact-move2 {
+  animation: contact-move2 2s linear forwards 0.3s; 
+}
+@keyframes contact-move2 {
+  0% {
+    height: 100%;
+    transform: translate(0,0);
+  }
+  33% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0,-320px);
+  }
+  66% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0, -320px);
+  }
+  100% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(-50px, -270px)
+               scale(1.5);
+  }
+}
+.contact-move3 {
+  animation: contact-move3 2s linear forwards 0.3s; 
+}
+@keyframes contact-move3 {
+  0% {
+    height: 100%;
+    transform: translate(0,0);
+  }
+  33% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0,-320px);
+  }
+  66% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0, -320px);
+  }
+  100% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(75px, -270px)
+               scale(1.5);
+  }
+}
+.contact-move4 {
+  animation: contact-move4 2s linear forwards 0.3s; 
+}
+@keyframes contact-move4 {
+  0% {
+    height: 100%;
+    transform: translate(0,0);
+  }
+  33% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(0,-500px);
+  }
+  66% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(-255px, -500px);
+  }
+  100% {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(-180px, -550px)
+               scale(1.5);
+  }
+}
+.contact-move1-remove {
+  animation: contact-move1-remove 1s linear forwards;
+}
+@keyframes contact-move1-remove {
+  from {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(205px, -550px)
+               scale(1.5);}
+  to {
+    height: 50px;
+    transform: translate(0, 0)
+               scale(1);
+  }
+}
+.contact-move2-remove {
+  animation: contact-move2-remove 1s linear forwards;
+}
+@keyframes contact-move2-remove {
+  from {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(-50px, -270px)
+               scale(1.5);}
+  to {
+    height: 50px;
+    transform: translate(0, 0)
+               scale(1);
+  }
+}
+.contact-move3-remove {
+  animation: contact-move3-remove 1s linear forwards;
+}
+@keyframes contact-move3-remove {
+  from {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(75px, -270px)
+               scale(1.5);}
+  to {
+    height: 50px;
+    transform: translate(0, 0)
+               scale(1);
+  }
+}
+.contact-move4-remove {
+  animation: contact-move4-remove 1s linear forwards;
+}
+@keyframes contact-move4-remove {
+  from {
+    height: 150px;
+    padding-top: 40px;
+    transform: translate(-180px, -550px)
+               scale(1.5);}
+  to {
+    height: 50px;
+    transform: translate(0, 0)
+               scale(1);
+  }
+}
+.hide-elem {
+  animation: hide-elem 0.5s linear forwards 0.2s;
+}
+.show-elem {
+  animation: hide-elem 0.5s linear forwards reverse 0.2s;
+}
+@keyframes hide-elem {
+  from {transform: scale(1)}
+  to {transform: scale(0)}
+}
+.hide-skills {
+  animation: hide-skills 0.5s linear forwards 0.2s;
+}
+.show-skills {
+  animation: hide-skills 0.5s linear forwards reverse 0.2s;
+}
+@keyframes hide-skills{
+  from {transform: scale(1)}
+  to {transform: scale(0)}
 }
