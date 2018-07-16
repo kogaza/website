@@ -12,8 +12,8 @@
 }
 header {
   text-align: center;
-  padding: 10px;
-  animation: title 0.5s linear both 6s;
+  padding: 40px;
+  animation: title 0.5s linear both 5s;
 }
 @keyframes title {
   from {transform: scale(0)}
@@ -273,7 +273,7 @@ footer div {
   transition: 2s;
 }
 footer div:nth-child(1) {
-  animation: contacts1 1s linear both 5s;
+  animation: contacts1 1s linear both 4.5s;
 }
 @keyframes contacts1 {
   0% {
@@ -301,7 +301,7 @@ footer div:nth-child(1) {
   }
 }
 footer div:nth-child(2) {
-  animation: contacts2 1s linear both 5s;
+  animation: contacts2 1s linear both 4.5s;
 }
 @keyframes contacts2 {
   0% {
@@ -330,7 +330,7 @@ footer div:nth-child(2) {
   }
 }
 footer div:nth-child(3) {
-  animation: contacts3 1s linear both 5s;
+  animation: contacts3 1s linear both 4.5s;
 }
 @keyframes contacts3 {
   0% {
@@ -359,7 +359,7 @@ footer div:nth-child(3) {
   }
 }
 footer div:nth-child(4) {
-  animation: contacts4 1s linear both 5s;
+  animation: contacts4 1s linear both 4.5s;
 }
 @keyframes contacts4 {
   0% {
