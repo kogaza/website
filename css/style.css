@@ -403,7 +403,7 @@ footer a:hover {
 }
 
 .contact-move1 {
-  animation: contact-move1 2s linear forwards 0.3s; 
+  animation: contact-move1 1s linear forwards 0.3s; 
 }
 @keyframes contact-move1 {
   0% {
@@ -428,7 +428,7 @@ footer a:hover {
   }
 }
 .contact-move2 {
-  animation: contact-move2 2s linear forwards 0.3s; 
+  animation: contact-move2 1s linear forwards 0.3s; 
 }
 @keyframes contact-move2 {
   0% {
@@ -453,7 +453,7 @@ footer a:hover {
   }
 }
 .contact-move3 {
-  animation: contact-move3 2s linear forwards 0.3s; 
+  animation: contact-move3 1s linear forwards 0.3s; 
 }
 @keyframes contact-move3 {
   0% {
@@ -478,7 +478,7 @@ footer a:hover {
   }
 }
 .contact-move4 {
-  animation: contact-move4 2s linear forwards 0.3s; 
+  animation: contact-move4 1s linear forwards 0.3s; 
 }
 @keyframes contact-move4 {
   0% {
@@ -503,7 +503,7 @@ footer a:hover {
   }
 }
 .contact-move1-remove {
-  animation: contact-move1-remove 1s linear forwards;
+  animation: contact-move1-remove 0.5s linear forwards;
 }
 @keyframes contact-move1-remove {
   from {
@@ -518,7 +518,7 @@ footer a:hover {
   }
 }
 .contact-move2-remove {
-  animation: contact-move2-remove 1s linear forwards;
+  animation: contact-move2-remove 0.5s linear forwards;
 }
 @keyframes contact-move2-remove {
   from {
@@ -533,7 +533,7 @@ footer a:hover {
   }
 }
 .contact-move3-remove {
-  animation: contact-move3-remove 1s linear forwards;
+  animation: contact-move3-remove 0.5s linear forwards;
 }
 @keyframes contact-move3-remove {
   from {
@@ -548,7 +548,7 @@ footer a:hover {
   }
 }
 .contact-move4-remove {
-  animation: contact-move4-remove 1s linear forwards;
+  animation: contact-move4-remove 0.5s linear forwards;
 }
 @keyframes contact-move4-remove {
   from {
@@ -563,22 +563,16 @@ footer a:hover {
   }
 }
 .hide-elem {
-  animation: hide-elem 0.5s linear forwards 0.2s;
+  animation: hide-elem 0.5s linear forwards;
 }
 .show-elem {
-  animation: hide-elem 0.5s linear forwards reverse 0.2s;
+  animation: show-elem 0.5s linear forwards;
 }
 @keyframes hide-elem {
   from {transform: scale(1)}
   to {transform: scale(0)}
 }
-.hide-skills {
-  animation: hide-skills 0.5s linear forwards 0.2s;
-}
-.show-skills {
-  animation: hide-skills 0.5s linear forwards reverse 0.2s;
-}
-@keyframes hide-skills{
-  from {transform: scale(1)}
-  to {transform: scale(0)}
+@keyframes show-elem {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
 }
