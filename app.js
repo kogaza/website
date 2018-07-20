@@ -1,8 +1,8 @@
 var projects = document.querySelector('.projects');
 var skills = document.querySelector('.skills');
 var aboutme = document.querySelector('.about-me');
-var contact = document.querySelectorAll('footer>div>a');
-var icon = document.querySelectorAll('footer>div>a>i');
+var contact = document.querySelectorAll('footer>.small-width>div>a');
+var icon = document.querySelectorAll('footer>.small-width>div>a>i');
 
 var menu = document.querySelectorAll('ul>li');
 menu[0].addEventListener('click', function(){
@@ -11,11 +11,12 @@ menu[0].addEventListener('click', function(){
     aboutme.classList.remove("hide-elem");
   }
   skills.classList.add("show-elem");
+  skills.classList.add("skills-background");
   skills.classList.remove("hide-elem");
   projects.classList.add("hide-elem");
   projects.classList.remove("show-elem");
   projects.classList.remove("bg-projects");
-
+  
   if(contact[0].classList.contains('contact-move1')){
     contact[0].classList.remove('contact-move1');
     contact[0].classList.add('contact-move1-remove');
@@ -42,6 +43,7 @@ menu[1].addEventListener('click',function(){
   if(skills.classList.contains("show-elem")){
     skills.classList.add("hide-elem");
     skills.classList.remove("show-elem");
+    skills.classList.remove("skills-background");
   }
   if(aboutme.classList.contains("hide-elem")){
     aboutme.classList.add("show-elem");
@@ -71,6 +73,7 @@ menu[2].addEventListener('click',function(){
   aboutme.classList.remove("show-elem");
   aboutme.classList.add("hide-elem");
   skills.classList.remove("show-elem");
+  skills.classList.remove("skills-background");
   skills.classList.add("hide-elem");
   contact[0].classList.remove('contact-move1-remove');
   contact[0].classList.add('contact-move1');
