@@ -1,13 +1,13 @@
 var canvas = document.querySelector('canvas');
 
-canvas.width = window.innerWidth;
+canvas.width = 500;
 canvas.height = 300;
 
-var motX = -400;
+var motX = 100;
 var motY = 0;
 var wheelX = 50;
 var wheelY = 50;
-var speed = 8;
+var speed = 0;
 var speedWheel = 0.2;
 var brake = innerWidth + 200;
 

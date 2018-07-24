@@ -1,9 +1,9 @@
-var projects = document.querySelector('.projects>.small-width');
+var projects = document.querySelector('.projects .small-width');
 var belt = document.querySelector('.belt');
 var skills = document.querySelector('.skills');
 var aboutme = document.querySelectorAll('.about-me article');
-var contact = document.querySelectorAll('footer>.small-width>div>a');
-var icon = document.querySelectorAll('footer>.small-width>div>a>i');
+var contact = document.querySelectorAll('footer a');
+var icon = document.querySelectorAll('footer i');
 
 
 var menu = document.querySelectorAll('ul>li');
