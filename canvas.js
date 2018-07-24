@@ -49,8 +49,8 @@ function wheel() {
 
   for (var i = 0; i < numberOfPoint; i++) {
     var alfaP = Math.PI - 360 / numberOfPoint * (4 - i);
-    wheelsArray1.push(new Wheel(motX + 290 - 8, motY + 200, wheelX + 2, wheelY + 2, alfaP));
-    wheelsArray2.push(new Wheel(motX - 8, motY + 200, wheelX +2, wheelY +2, alfaP));
+    wheelsArray1.push(new Wheel(motX + 290, motY + 200, wheelX + 2, wheelY + 2, alfaP));
+    wheelsArray2.push(new Wheel(motX, motY + 200, wheelX +2, wheelY +2, alfaP));
   }
   motorbike();
 }
