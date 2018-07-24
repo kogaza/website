@@ -1,15 +1,21 @@
-var projects = document.querySelector('.projects');
+var projects = document.querySelector('.projects>.small-width');
+var belt = document.querySelector('.belt');
 var skills = document.querySelector('.skills');
-var aboutme = document.querySelector('.about-me');
+var aboutme = document.querySelectorAll('.about-me article');
 var contact = document.querySelectorAll('footer>.small-width>div>a');
 var icon = document.querySelectorAll('footer>.small-width>div>a>i');
 
+
 var menu = document.querySelectorAll('ul>li');
 menu[0].addEventListener('click', function(){
-  if(aboutme.classList.contains("hide-elem")){
-    aboutme.classList.add("show-elem");
-    aboutme.classList.remove("hide-elem");
+  if(aboutme[0].classList.contains("hide-elem")){
+    for(var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.add("show-elem");
+      aboutme[i].classList.remove("hide-elem");
+    }
   }
+  belt.classList.add("belt");
+  belt.classList.remove("hidden-belt");
   skills.classList.add("show-elem");
   skills.classList.add("skills-background");
   skills.classList.remove("hide-elem");
@@ -45,10 +51,12 @@ menu[1].addEventListener('click',function(){
     skills.classList.remove("show-elem");
     skills.classList.remove("skills-background");
   }
-  if(aboutme.classList.contains("hide-elem")){
-    aboutme.classList.add("show-elem");
-    aboutme.classList.remove("hide-elem");
-  }
+  if(aboutme[0].classList.contains("hide-elem")){
+    for(var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.add("show-elem");
+      aboutme[i].classList.remove("hide-elem");
+      }
+  };
   if(contact[0].classList.contains('contact-move1')){
     contact[0].classList.remove('contact-move1');
     contact[0].classList.add('contact-move1-remove');
@@ -65,14 +73,20 @@ menu[1].addEventListener('click',function(){
     contact[3].classList.remove('contact-move4');
     contact[3].classList.add('contact-move4-remove');
   }
+  belt.classList.add("belt");
+  belt.classList.remove("hidden-belt");
 })
 menu[2].addEventListener('click',function(){
   projects.classList.add("hide-elem");
   projects.classList.remove("show-elem");
   projects.classList.remove("bg-projects");
-  aboutme.classList.remove("show-elem");
-  aboutme.classList.add("hide-elem");
-  skills.classList.remove("show-elem");
+  belt.classList.remove("belt");
+  belt.classList.add("hidden-belt");
+  for(var i = 0; i < aboutme.length; i++) {
+    aboutme[i].classList.remove("show-elem");
+    aboutme[i].classList.add("hide-elem");    
+  }
+  skills.classList.remove("show-elem");;
   skills.classList.remove("skills-background");
   skills.classList.add("hide-elem");
   contact[0].classList.remove('contact-move1-remove');
