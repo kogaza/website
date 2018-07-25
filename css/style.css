@@ -21,6 +21,9 @@ header {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+header h1 {
+  font-size: 30px;
+}
 .small-width {
   width: 1024px;
   margin: 0 auto;
@@ -170,7 +173,7 @@ nav li:nth-child(3) {
   to {height: 0}
 }
 .projects {
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   flex-direction: row;
   position: relative;
@@ -301,13 +304,13 @@ nav li:nth-child(3) {
   margin: 30px auto;
   justify-content: space-around;
 }
-.contacts .small-width div {
+.contacts div {
   width: 22%;
   height: 50px;
   text-align: center;
   transition: 2s;
 }
-.contacts .small-width div:nth-child(1) {
+.contacts div:nth-child(1) {
   animation: contacts1 1s linear both 3.5s;
 }
 @keyframes contacts1 {
@@ -436,6 +439,7 @@ nav li:nth-child(3) {
   transition: 0.5s;
   color: #FFEC0D !important;
 }
+@media screen and (min-width: 1025px) {
 .contact-move1 {
   animation: contact-move1 1s linear forwards 0.1s, 
              color-contacts 1s linear forwards; 
@@ -612,6 +616,7 @@ nav li:nth-child(3) {
   from {background-color: white; color: #267DE8}
   to {background-color: #267DE8}
 }
+}
 .hide-elem {
   animation: hide-elem 0.5s linear forwards;
 }
@@ -644,7 +649,7 @@ canvas {
   to {width: 0}
 }
 footer {
-  height: 100px;
+  padding: 20px;
   background-color: #267DE8;
   display: flex;
   justify-content: center;
@@ -658,12 +663,16 @@ footer {
   to {transform: scale(1) translateY(0)}
 }
 @media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 18px;
+  }
   .small-width {
     max-width: 100%;
   }
   nav li {
-    margin: 5px;
+    margin: 10px;
     width: 20%;
+    font-size: 14px;
   }
   .about-me {
     height: 200px;
@@ -674,17 +683,44 @@ footer {
     font-size: 13px;
     padding: 3%;
   }
+  .belt {
+    animation: start-height 0.5s linear forwards;
+  }
+  @keyframes start-height {
+    from {height: 0}
+    to {height: 39px}
+  }
+  .projects .small-width {
+    max-width: 100%;
+    width: auto;
+  }
+  /* .projects {
+    height: 200px;
+  } */
+  .contacts .small-width {
+    margin: 10px auto;
+  }
+  .contacts div {
+    width: 24%;
+    height: auto;
+    font-size: 10px;
+  }
+  footer {
+    font-size: 12px;
+  }
+
 }
 @media screen and (min-width: 641px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 24px;
+  }
   .small-width {
     max-width: 100%;
+    width: auto;
   }
   nav li {
-    margin: 5px;
+    margin: 10px;
     width: 20%;
-  }
-  nav li:hover {
-    color: red;
   }
   .about-me {
     height: 300px;
@@ -694,5 +730,88 @@ footer {
     height: 300px; 
     font-size: 17px;
     padding: 4%;
+  }
+  .belt {
+    animation: start-height 0.5s linear forwards;
+  }
+  @keyframes start-height {
+    from {height: 0}
+    to {height: 39px}
+  }
+  .contacts .small-width {
+    margin: 10px auto;
+  }
+  .contacts div {
+    width: 24%;
+    height: auto;
+    font-size: 10px;
+  }
+
+  .contact-move1 {
+    animation: contact-move1 1s linear forwards 0.1s, 
+               color-contacts 1s linear forwards; 
+  }
+  @keyframes contact-move1 {
+    0% {
+      height: 100%;
+      transform: translate(0,0)
+    }
+    100% {
+      height: 120px;
+      padding-top: 30px;
+      font-size: 14px;
+      transform: translate(100px,-500px) scale(1.2)}
+  }
+  .contact-move2 {
+    animation: contact-move2 1s linear forwards 0.1s, 
+               color-contacts 1s linear forwards; 
+  }
+  @keyframes contact-move2 {
+    0% {
+      height: 100%;
+      transform: translate(0,0)
+    }
+    100% {
+      padding-top: 30px;
+      height: 120px;
+      font-size: 14px;
+      transform: translate(-125px,-250px) scale(1.2)}
+  }
+  .contact-move3 {
+    animation: contact-move3 1s linear forwards 0.1s, 
+               color-contacts 1s linear forwards; 
+  }
+  @keyframes contact-move3 {
+    0% {
+      height: 100%;
+      transform: translate(0,0)
+    }
+    100% {
+      padding-top: 30px;
+      height: 120px;
+      font-size: 14px;
+      transform: translate(125px,-250px) scale(1.2)}
+  }
+  .contact-move4 {
+    animation: contact-move4 1s linear forwards 0.1s, 
+               color-contacts 1s linear forwards; 
+  }
+  @keyframes contact-move4 {
+    0% {
+      height: 100%;
+      transform: translate(0,0)
+    }
+    100% {
+      padding-top: 30px;
+      height: 120px;
+      font-size: 14px;
+      transform: translate(-100px,-500px) scale(1.2)}
+  }
+  @keyframes color-contacts {
+    from {background-color: #267DE8; color: white}
+    to {background-color: white; color: #267DE8}
+  }
+  footer {
+    font-size: 16px;
   }
 }
