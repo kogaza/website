@@ -728,6 +728,12 @@ footer {
     font-size: 17px;
     padding: 4%;
   }
+  .projects .small-width {
+    justify-content: center;
+  }
+  .projects article {
+    width: 60%;
+  }
   .belt {
     animation: start-height 0.5s linear forwards;
   }
@@ -742,6 +748,9 @@ footer {
     margin: 10px 0;
     width: 24%;
     height: auto;
+    font-size: 14px;
+  }
+  footer {
     font-size: 14px;
   }
 
