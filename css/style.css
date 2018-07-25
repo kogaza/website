@@ -173,7 +173,6 @@ nav li:nth-child(3) {
   to {height: 0}
 }
 .projects {
-  /* height: 300px; */
   display: flex;
   flex-direction: row;
   position: relative;
@@ -694,9 +693,6 @@ footer {
     max-width: 100%;
     width: auto;
   }
-  /* .projects {
-    height: 200px;
-  } */
   .contacts .small-width {
     margin: 10px auto;
   }
