@@ -48,6 +48,8 @@ menu[0].addEventListener('click', function(){
 })
 menu[1].addEventListener('click',function(){
   skillsBackground.classList.remove("blue-belt");
+  skills.classList.remove("show-elem");
+  skills.classList.add("hide-elem");
   projectsBackground.classList.add("blue-belt");
   projectsBackground.classList.remove("hide-projects");
   if(projects.classList.contains("hide-elem")){
@@ -84,8 +86,10 @@ menu[1].addEventListener('click',function(){
   }
   belt.classList.add("belt");
   belt.classList.remove("hidden-belt");
+  canvas.classList.remove("projects-and-canvas");
 })
 menu[2].addEventListener('click',function(){
+  canvas.classList.remove("projects-and-canvas");
   projects.classList.add("hide-elem");
   projects.classList.remove("show-elem");
   projects.classList.remove("bg-projects");
