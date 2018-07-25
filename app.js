@@ -1,9 +1,12 @@
+var projectsBackground = document.querySelector('.projects');
 var projects = document.querySelector('.projects .small-width');
 var belt = document.querySelector('.belt');
-var skills = document.querySelector('.skills');
+var skillsBackground = document.querySelector('.skills');
+var skills = document.querySelector('.skills .small-width');
 var aboutme = document.querySelectorAll('.about-me article');
-var contact = document.querySelectorAll('footer a');
-var icon = document.querySelectorAll('footer i');
+var contact = document.querySelectorAll('.contacts a');
+var icon = document.querySelectorAll('.contacts i');
+var canvas = document.querySelector('.projects-and-canvas');
 
 
 var menu = document.querySelectorAll('ul>li');
@@ -16,12 +19,15 @@ menu[0].addEventListener('click', function(){
   }
   belt.classList.add("belt");
   belt.classList.remove("hidden-belt");
+  skillsBackground.classList.add("blue-belt");
   skills.classList.add("show-elem");
-  skills.classList.add("skills-background");
   skills.classList.remove("hide-elem");
+  projectsBackground.classList.add("hide-projects");
+  projectsBackground.classList.remove("blue-belt");
   projects.classList.add("hide-elem");
   projects.classList.remove("show-elem");
   projects.classList.remove("bg-projects");
+  canvas.classList.remove("projects-and-canvas");
   
   if(contact[0].classList.contains('contact-move1')){
     contact[0].classList.remove('contact-move1');
@@ -41,6 +47,9 @@ menu[0].addEventListener('click', function(){
   }
 })
 menu[1].addEventListener('click',function(){
+  skillsBackground.classList.remove("blue-belt");
+  projectsBackground.classList.add("blue-belt");
+  projectsBackground.classList.remove("hide-projects");
   if(projects.classList.contains("hide-elem")){
     projects.classList.add("show-elem");
     projects.classList.remove("hide-elem");
