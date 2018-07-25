@@ -715,8 +715,9 @@ footer {
     width: auto;
   }
   nav li {
-    margin: 10px;
+    margin: 20px;
     width: 20%;
+    font-size: 18px;
   }
   .about-me {
     height: 300px;
@@ -738,9 +739,10 @@ footer {
     margin: 10px auto;
   }
   .contacts div {
+    margin: 10px 0;
     width: 24%;
     height: auto;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .contact-move1 {
@@ -771,7 +773,7 @@ footer {
       padding-top: 30px;
       height: 120px;
       font-size: 14px;
-      transform: translate(-125px,-250px) scale(1.2)}
+      transform: translate(-100px,-250px) scale(1.2)}
   }
   .contact-move3 {
     animation: contact-move3 1s linear forwards 0.1s, 
@@ -786,7 +788,7 @@ footer {
       padding-top: 30px;
       height: 120px;
       font-size: 14px;
-      transform: translate(125px,-250px) scale(1.2)}
+      transform: translate(100px,-250px) scale(1.2)}
   }
   .contact-move4 {
     animation: contact-move4 1s linear forwards 0.1s, 
@@ -806,8 +808,5 @@ footer {
   @keyframes color-contacts {
     from {background-color: #267DE8; color: white}
     to {background-color: white; color: #267DE8}
-  }
-  footer {
-    font-size: 16px;
   }
 }
