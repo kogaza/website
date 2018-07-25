@@ -614,7 +614,7 @@ nav li:nth-child(3) {
 @keyframes color-contacts-back {
   from {background-color: white; color: #267DE8}
   to {background-color: #267DE8}
-}
+  }
 }
 .hide-elem {
   animation: hide-elem 0.5s linear forwards;
@@ -809,4 +809,73 @@ footer {
     from {background-color: #267DE8; color: white}
     to {background-color: white; color: #267DE8}
   }
+  .contact-move1-remove {
+    animation: contact-move1-remove 0.5s linear forwards, 
+               color-contacts-back 0.5s linear forwards;
+  }
+  @keyframes contact-move1-remove {
+    from {
+      height: 120px;
+      padding-top: 30px;
+      transform: translate(100px, -500px)
+                 scale(1.2);}
+    to {
+      height: 50px;
+      transform: translate(0, 0)
+                 scale(1);
+    }
+  }
+  .contact-move2-remove {
+    animation: contact-move2-remove 0.5s linear forwards, 
+               color-contacts-back 0.5s linear forwards;
+  }
+  @keyframes contact-move2-remove {
+    from {
+      height: 120px;
+      padding-top: 30px;
+      transform: translate(-100px, -250px)
+                 scale(1.2);}
+    to {
+      height: 50px;
+      transform: translate(0, 0)
+                 scale(1);
+    }
+  }
+  .contact-move3-remove {
+    animation: contact-move3-remove 0.5s linear forwards, 
+               color-contacts-back 0.5s linear forwards;
+  }
+  @keyframes contact-move3-remove {
+    from {
+      height: 120px;
+      padding-top: 30px;
+      transform: translate(100px, -250px)
+                 scale(1.2);}
+    to {
+      height: 50px;
+      transform: translate(0, 0)
+                 scale(1);
+    }
+  }
+  .contact-move4-remove {
+    animation: contact-move4-remove 0.5s linear forwards, 
+               color-contacts-back 0.5s linear forwards;
+  }
+  @keyframes contact-move4-remove {
+    from {
+      height: 120px;
+      padding-top: 30px;
+      transform: translate(-100px, -500px)
+                 scale(1.2);}
+    to {
+      height: 50px;
+      transform: translate(0, 0)
+                 scale(1);
+    }
+  }
+  @keyframes color-contacts-back {
+    from {background-color: white; color: #267DE8}
+    to {background-color: #267DE8}
+  }
+  
 }
