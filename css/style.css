@@ -209,6 +209,10 @@ nav li:nth-child(3) {
   background-color: #267DE8;
   opacity: 1;
 }
+.blue-projects {
+  background-color: #267DE8;
+  height: 550px;
+}
 .projects article {
   overflow: hidden;
   margin: 1%;

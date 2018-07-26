@@ -4,7 +4,9 @@ var belt = document.querySelector('.belt');
 var skillsBackground = document.querySelector('.skills');
 var skills = document.querySelector('.skills .small-width');
 var aboutme = document.querySelectorAll('.about-me article');
+var aboutmeBackground = document.querySelector('.about-me');
 var contact = document.querySelectorAll('.contacts a');
+var contactBackground = document.querySelector('.contacts');
 var icon = document.querySelectorAll('.contacts i');
 var canvas = document.querySelector('.projects-and-canvas');
 
@@ -44,6 +46,12 @@ menu[0].addEventListener('click', function(){
   if(contact[3].classList.contains('contact-move4')){
     contact[3].classList.remove('contact-move4');
     contact[3].classList.add('contact-move4-remove');
+  }
+  if(screen.width < 1025) {
+    aboutmeBackground.style.cssText = "";
+    contactBackground.style.cssText = "";
+    canvas.style.cssText = "";
+    projectsBackground.classList.remove('blue-projects');
   }
 })
 menu[1].addEventListener('click',function(){
@@ -87,6 +95,12 @@ menu[1].addEventListener('click',function(){
   belt.classList.add("belt");
   belt.classList.remove("hidden-belt");
   canvas.classList.remove("projects-and-canvas");
+  if(screen.width < 1025) {
+    aboutmeBackground.style.cssText = "";
+    contactBackground.style.cssText = "";
+    canvas.style.cssText = "";
+    projectsBackground.classList.remove('blue-projects');
+  }
 })
 menu[2].addEventListener('click',function(){
   canvas.classList.remove("projects-and-canvas");
@@ -109,5 +123,12 @@ menu[2].addEventListener('click',function(){
   contact[2].classList.remove('contact-move3-remove');
   contact[2].classList.add('contact-move3');
   contact[3].classList.remove('contact-move4-remove');
-  contact[3].classList.add('contact-move4');  
+  contact[3].classList.add('contact-move4');
+  if(screen.width < 1025) {
+    aboutmeBackground.style.cssText = "height: 0";
+    contactBackground.style.cssText = "height: 50px";
+    canvas.style.cssText = "height: 0";
+    projectsBackground.classList.add('blue-projects');
+    skillsBackground.classList.remove("blue-belt");
+  }
 })
