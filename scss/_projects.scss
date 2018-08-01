@@ -1,0 +1,115 @@
+@import 'variables';
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  animation: background-projects 0.6s linear both 3.5s;
+  .small-width {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    color: $text-color-1;
+    padding: 25px;
+  }
+  article {
+    overflow: hidden;
+    margin: 1%;
+    width: 31.33%;
+    border: 2px solid $background-color-1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    background-color: $text-color-1;
+    &:nth-child(1) {
+      width: 100%;
+      text-align: center;
+      border: 0;
+      background-color: inherit;
+    }
+    &:nth-child(3){
+      animation: second-project 0.8s linear both 1.5s;
+    }
+    &:nth-child(4){
+      animation: third-project 1.6s linear both 1.5s;
+    }
+  }
+  a{
+    transition: 1s;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+  }
+  h2 {
+    animation: my-projects 0.3s linear both 4s;
+  }
+}
+@keyframes background-projects {
+  from{background-color: rgba(38, 125, 232, 0)}
+  to{background-color: $background-color-1}
+}
+@keyframes my-projects {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-20px) scale(0.8)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes second-project {
+  0%{transform: translate(-300px,20px)}
+  100%{transform: translate(0,0)}
+}
+@keyframes third-project {
+  0%{transform: translate(-600px,40px)}
+  100%{transform: translate(0,0)}
+}
+.hide-projects {
+  height: 0;
+}
+.projects-and-canvas {
+  width: 1524px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.2;
+  animation: projects1 1.5s linear both;
+}
+@keyframes projects1 {
+  from {transform: translateX(-1500px)}
+  to {transform: translateX(0);opacity: 1;}
+}
+.bg-projects {
+  background-color: $background-color-1;
+  opacity: 1;
+}
+.blue-projects {
+  background-color: $background-color-1;
+  height: 550px;
+}
+@media screen and (max-width: 640px) {
+  .projects {
+    .small-width {
+    max-width: 100%;
+    width: auto;
+    }
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .projects {
+    .small-width {
+    justify-content: center;
+    }
+    article {
+      width: 60%;
+    }
+  }
+}

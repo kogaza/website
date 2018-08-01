@@ -1,0 +1,91 @@
+@import 'variables';
+
+.about-me {
+  height: 350px;
+  background-color: $background-color-1;
+  animation: about-me 0.5s linear both 3.5s;
+  .small-width article {
+    width: 40%;
+    height: 300px; 
+    font-size: 20px;
+    text-align: center;
+    padding: 3% 2%;
+    color: $text-color-1;
+  }
+  .small-width {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: about-me 0.5s linear both 3.5s;
+  }
+}
+@keyframes about-me {
+  0% {
+    transform: translate(0, 300px) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+  }
+}
+.picture {
+  width: 75%;
+  height: 100%;
+  border-radius: 25%;
+  background: grey;
+  background-image: url('../images/cv.jpg');
+  background-size: cover;
+}
+.belt {
+  animation: start-height 0.5s linear forwards;
+}
+@keyframes start-height {
+  from {height: 0}
+  to {height: 79px}
+}
+.hidden-belt {
+  animation: move-height 0.5s linear forwards ;
+}
+@keyframes move-height {
+  from {height: 79px}
+  to {height: 0}
+}
+@media screen and (max-width: 640px) {
+  .about-me {
+    height: 200px;
+    .small-width article {
+      width: 380px;
+      height: 200px; 
+      font-size: 13px;
+      padding: 3%;
+    }
+  }
+  .belt {
+    animation: start-height 0.5s linear forwards;
+  }
+  @keyframes start-height {
+    from {height: 0}
+    to {height: 39px}
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .about-me {
+    height: 300px;
+    .small-width {
+      article {
+      width: 380px;
+      height: 300px; 
+      font-size: 17px;
+      padding: 4%;
+      }
+    }
+  }
+  .belt {
+    animation: start-height 0.5s linear forwards;
+  }
+  @keyframes start-height {
+    from {height: 0}
+    to {height: 39px}
+  }
+}

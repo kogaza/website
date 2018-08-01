@@ -1,0 +1,43 @@
+@import 'variables';
+
+*{
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+.page {
+  margin: 0 auto;
+  width: 100%;
+}
+.small-width {
+  width: 1024px;
+  margin: 0 auto;
+}
+.hide-elem {
+  animation: hide-elem 0.5s linear forwards;
+}
+.show-elem {
+  animation: show-elem 0.5s linear forwards;
+}
+@keyframes hide-elem {
+  from {transform: scale(1)}
+  to {transform: scale(0)}
+}
+@keyframes show-elem {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+@media screen and (max-width: 640px) {
+  .small-width {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .small-width {
+    max-width: 100%;
+    width: auto;
+  }
+}

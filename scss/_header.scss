@@ -1,0 +1,28 @@
+@import 'variables';
+
+header {
+  background-color: $background-color-1;
+  color: #FFEC0D;
+  text-align: center;
+  padding: 20px;
+  animation: title 0.5s linear both 4s;
+  h1 {
+    font-size: 30px;
+  }
+}
+@keyframes title {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+@media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  header {
+    h1 {
+    font-size: 24px;
+    }
+  }
+}

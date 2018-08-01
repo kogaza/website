@@ -1,0 +1,36 @@
+@import 'variables';
+
+.skills {
+  height: 300px;
+  padding-top: 25px;
+  display: none;
+  .small-width {
+    transform: scale(0);
+    width: 1024px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+    padding-bottom: 35px;
+    color: $text-color-1;
+  }
+  .small-width ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .small-width li {
+    width: 40%; 
+  }
+}
+.skills-background {
+  background-color: $background-color-1;
+  display: block;
+}
+.blue-belt {
+  background-color: $background-color-1;
+  display: block;
+}
