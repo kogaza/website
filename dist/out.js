@@ -78,6 +78,12 @@ module.exports = __webpack_require__(2);
 "use strict";
 
 
+var _rectangle = __webpack_require__(9);
+
+var _rectangle2 = _interopRequireDefault(_rectangle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var projectsBackground = document.querySelector('.projects');
 var projects = document.querySelector('.projects .small-width');
 var belt = document.querySelector('.belt');
@@ -89,6 +95,7 @@ var contact = document.querySelectorAll('.contacts a');
 var contactBackground = document.querySelector('.contacts');
 var icon = document.querySelectorAll('.contacts i');
 var canvas = document.querySelector('.projects-and-canvas');
+(0, _rectangle2.default)();
 
 var menu = document.querySelectorAll('ul>li');
 menu[0].addEventListener('click', function () {
@@ -217,6 +224,54 @@ menu[2].addEventListener('click', function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = init;
+function createRectangle() {
+  var rectangle = document.createElement('div');
+  rectangle.className = 'rectangle';
+  var width = window.innerWidth;
+  var footer = document.querySelector('footer');
+  var height = footer.getBoundingClientRect();
+  var x = Math.round(Math.random() * width);
+  var y = Math.round(Math.random() * height.top);
+  rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+  document.body.appendChild(rectangle);
+  setTimeout(function () {
+    return animateRectangle(rectangle);
+  }, 1000);
+}
+function animateRectangle(rectangle) {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var x = Math.round(Math.random() * width) - 250;
+  var y = Math.round(Math.random() * height) - 150;
+  rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+  rectangle.style.opacity = 1;
+  setTimeout(function () {
+    return animateRectangle(rectangle, x, y);
+  }, 100000);
+}
+function init() {
+  for (var i = 0; i < 50; i++) {
+    createRectangle();
+  }
+}
 
 /***/ })
 /******/ ]);

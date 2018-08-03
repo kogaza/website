@@ -1,4 +1,9 @@
-$background-color-1: #267DE8;
+$background-color-1: rgba(38, 125, 232, 0.6);
 $background-color-2: white;
-$text-color-1: white;
-$text-color-2: #267DE8;
+$text-color-1: $background-color-2;
+$text-color-2: $background-color-1;
+$rect-width: 200px;
+$rect-height: 100px;
+$rect-pos-top: 100px;
+$rect-pos-left: 100px;
+$rect-background: rgba(176, 208, 247, 0.3);

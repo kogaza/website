@@ -1,6 +1,6 @@
 .about-me {
   height: 350px;
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   animation: about-me 0.5s linear both 3.5s; }
   .about-me .small-width article {
     width: 40%;
@@ -89,6 +89,9 @@
   padding: 0;
   font-family: 'Lato', sans-serif; }
 
+body {
+  overflow: hidden; }
+
 .page {
   margin: 0 auto;
   width: 100%; }
@@ -164,7 +167,7 @@ canvas {
     animation: contacts4 1s linear both 3.5s; }
 
 .contacts a {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   border-radius: 5px;
   cursor: pointer;
   padding: 3px 0;
@@ -307,11 +310,11 @@ canvas {
       transform: translate(-180px, -580px) scale(1.5); } }
   @keyframes color-contacts {
     from {
-      background-color: #267DE8;
+      background-color: rgba(38, 125, 232, 0.6);
       color: white; }
     to {
       background-color: white;
-      color: #267DE8; } }
+      color: rgba(38, 125, 232, 0.6); } }
   .contact-move1-remove {
     animation: contact-move1-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
   @keyframes contact-move1-remove {
@@ -355,9 +358,9 @@ canvas {
   @keyframes color-contacts-back {
     from {
       background-color: white;
-      color: #267DE8; }
+      color: rgba(38, 125, 232, 0.6); }
     to {
-      background-color: #267DE8; } } }
+      background-color: rgba(38, 125, 232, 0.6); } } }
 
 @media screen and (max-width: 640px) {
   .contacts .small-width {
@@ -421,11 +424,11 @@ canvas {
       transform: translate(-100px, -500px) scale(1.2); } }
   @keyframes color-contacts {
     from {
-      background-color: #267DE8;
+      background-color: rgba(38, 125, 232, 0.6);
       color: white; }
     to {
       background-color: white;
-      color: #267DE8; } }
+      color: rgba(38, 125, 232, 0.6); } }
   .contact-move1-remove {
     animation: contact-move1-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
   @keyframes contact-move1-remove {
@@ -469,13 +472,13 @@ canvas {
   @keyframes color-contacts-back {
     from {
       background-color: white;
-      color: #267DE8; }
+      color: rgba(38, 125, 232, 0.6); }
     to {
-      background-color: #267DE8; } } }
+      background-color: rgba(38, 125, 232, 0.6); } } }
 
 footer {
   padding: 20px;
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -498,7 +501,7 @@ footer {
     font-size: 14px; } }
 
 header {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   color: #FFEC0D;
   text-align: center;
   padding: 20px;
@@ -525,7 +528,7 @@ nav ul {
   justify-content: center; }
 
 nav li {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   text-align: center;
   color: white;
   padding: 5px;
@@ -612,7 +615,7 @@ nav li {
     overflow: hidden;
     margin: 1%;
     width: 31.33%;
-    border: 2px solid #267DE8;
+    border: 2px solid rgba(38, 125, 232, 0.6);
     border-radius: 5px;
     cursor: pointer;
     transition: 1s;
@@ -638,7 +641,7 @@ nav li {
   from {
     background-color: rgba(38, 125, 232, 0); }
   to {
-    background-color: #267DE8; } }
+    background-color: rgba(38, 125, 232, 0.6); } }
 
 @keyframes my-projects {
   0% {
@@ -682,11 +685,10 @@ nav li {
     opacity: 1; } }
 
 .bg-projects {
-  background-color: #267DE8;
   opacity: 1; }
 
 .blue-projects {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   height: 550px; }
 
 @media screen and (max-width: 640px) {
@@ -699,6 +701,17 @@ nav li {
     justify-content: center; }
   .projects article {
     width: 60%; } }
+
+.rectangle {
+  background-color: rgba(176, 208, 247, 0.3);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+  z-index: -1;
+  transition: transform 100s linear, opacity 2s linear 3s;
+  opacity: 0; }
 
 .skills {
   height: 300px;
@@ -724,9 +737,9 @@ nav li {
     width: 40%; }
 
 .skills-background {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   display: block; }
 
 .blue-belt {
-  background-color: #267DE8;
+  background-color: rgba(38, 125, 232, 0.6);
   display: block; }

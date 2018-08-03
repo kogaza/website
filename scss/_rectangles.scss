@@ -1,11 +1,14 @@
 @import 'variables';
 
-// .rectangle {
-//   border: 2px solid red;
-//   position: absolute;
-//   top: 100px;
-//   left: 100px;
-//   width: 200px;
-//   height: 100px;
-//   z-index: -1;
-// }
+.rectangle {
+  background-color: $rect-background;
+  position: absolute;
+  top: $rect-pos-top;
+  left: $rect-pos-left;
+  width: $rect-width;
+  height: $rect-height;
+  z-index: -1;
+  transition: transform 100s linear, opacity 2s linear 3s;
+  opacity: 0;
+}
+

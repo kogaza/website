@@ -1,3 +1,5 @@
+import rectangle from './rectangle'
+
 var projectsBackground = document.querySelector('.projects');
 var projects = document.querySelector('.projects .small-width');
 var belt = document.querySelector('.belt');
@@ -9,7 +11,7 @@ var contact = document.querySelectorAll('.contacts a');
 var contactBackground = document.querySelector('.contacts');
 var icon = document.querySelectorAll('.contacts i');
 var canvas = document.querySelector('.projects-and-canvas');
-
+rectangle();
 
 var menu = document.querySelectorAll('ul>li');
 menu[0].addEventListener('click', function(){
