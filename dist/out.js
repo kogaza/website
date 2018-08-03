@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
@@ -78,7 +78,7 @@ module.exports = __webpack_require__(2);
 "use strict";
 
 
-var _rectangle = __webpack_require__(9);
+var _rectangle = __webpack_require__(2);
 
 var _rectangle2 = _interopRequireDefault(_rectangle);
 
@@ -221,18 +221,6 @@ menu[2].addEventListener('click', function () {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -245,11 +233,15 @@ exports.default = init;
 function createRectangle() {
   var rectangle = document.createElement('div');
   rectangle.className = 'rectangle';
+  var widthElement = Math.round(Math.random() * 400);
+  rectangle.style.width = widthElement + 'px';
+  var heightElement = Math.round(Math.random() * 400);
+  rectangle.style.height = heightElement + 'px';
   var width = window.innerWidth;
   var footer = document.querySelector('footer');
   var height = footer.getBoundingClientRect();
-  var x = Math.round(Math.random() * width);
-  var y = Math.round(Math.random() * height.top);
+  var x = Math.round(Math.random() * width) - widthElement;
+  var y = Math.round(Math.random() * height.top - heightElement);
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   document.body.appendChild(rectangle);
   setTimeout(function () {
@@ -272,6 +264,12 @@ function init() {
     createRectangle();
   }
 }
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

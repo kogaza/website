@@ -5,8 +5,8 @@
   position: absolute;
   top: $rect-pos-top;
   left: $rect-pos-left;
-  width: $rect-width;
-  height: $rect-height;
+  // width: $rect-width;
+  // height: $rect-height;
   z-index: -1;
   transition: transform 100s linear, opacity 2s linear 3s;
   opacity: 0;

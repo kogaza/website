@@ -1,12 +1,16 @@
 function createRectangle() {
   const rectangle = document.createElement('div');
   rectangle.className = 'rectangle';
+  let widthElement = Math.round(Math.random()*400);
+  rectangle.style.width = `${widthElement}px`;
+  let heightElement = Math.round(Math.random()*400);
+  rectangle.style.height = `${heightElement}px`;
   let width = window.innerWidth;
   const footer = document.querySelector('footer');
   let height = footer.getBoundingClientRect();
-  let x = Math.round(Math.random()*width);
-  let y = Math.round(Math.random()*height.top);
-  rectangle.style.transform = `translate3d(${x}px,${y}px,0)`
+  let x = Math.round(Math.random()*width)-widthElement;
+  let y = Math.round(Math.random()*height.top-heightElement);
+  rectangle.style.transform = `translate3d(${x}px,${y}px,0)`;
   document.body.appendChild(rectangle);
   setTimeout(() => animateRectangle(rectangle),1000);
 }
