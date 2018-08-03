@@ -230,38 +230,44 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = init;
-function createRectangle() {
+
+var width = void 0,
+    footer = void 0,
+    height = void 0;
+
+function createRectangle(time) {
+  var timeEl = time;
   var rectangle = document.createElement('div');
   rectangle.className = 'rectangle';
-  var widthElement = Math.round(Math.random() * 400);
+  var widthElement = Math.round(Math.random() * 200 + 50);
   rectangle.style.width = widthElement + 'px';
-  var heightElement = Math.round(Math.random() * 400);
+  var heightElement = Math.round(Math.random() * 200 + 50);
   rectangle.style.height = heightElement + 'px';
-  var width = window.innerWidth;
-  var footer = document.querySelector('footer');
-  var height = footer.getBoundingClientRect();
   var x = Math.round(Math.random() * width) - widthElement;
   var y = Math.round(Math.random() * height.top - heightElement);
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   document.body.appendChild(rectangle);
   setTimeout(function () {
-    return animateRectangle(rectangle);
-  }, 1000);
+    return animateRectangle(rectangle, widthElement, heightElement, timeEl);
+  }, timeEl / 5);
 }
-function animateRectangle(rectangle) {
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  var x = Math.round(Math.random() * width) - 250;
-  var y = Math.round(Math.random() * height) - 150;
+function animateRectangle(rectangle, widthElement, heightElement, time) {
+  var timeEl = time;
+  var x = Math.round(Math.random() * width) - widthElement;
+  var y = Math.round(Math.random() * height.top - heightElement);
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   rectangle.style.opacity = 1;
   setTimeout(function () {
-    return animateRectangle(rectangle, x, y);
-  }, 100000);
+    return animateRectangle(rectangle, x, y, timeEl);
+  }, timeEl);
 }
 function init() {
+  width = window.innerWidth;
+  footer = document.querySelector('footer');
+  height = footer.getBoundingClientRect();
   for (var i = 0; i < 50; i++) {
-    createRectangle();
+    var time = Math.round(Math.random() * 40000 + 10000);
+    createRectangle(time);
   }
 }
 

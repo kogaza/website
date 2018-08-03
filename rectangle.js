@@ -1,30 +1,34 @@
-function createRectangle() {
+
+let width, footer, height;
+
+function createRectangle(time) {
+  let timeEl = time;
   const rectangle = document.createElement('div');
   rectangle.className = 'rectangle';
-  let widthElement = Math.round(Math.random()*400);
+  let widthElement = Math.round(Math.random() * 200 + 50);
   rectangle.style.width = `${widthElement}px`;
-  let heightElement = Math.round(Math.random()*400);
+  let heightElement = Math.round(Math.random() * 200 + 50);
   rectangle.style.height = `${heightElement}px`;
-  let width = window.innerWidth;
-  const footer = document.querySelector('footer');
-  let height = footer.getBoundingClientRect();
-  let x = Math.round(Math.random()*width)-widthElement;
-  let y = Math.round(Math.random()*height.top-heightElement);
+  let x = Math.round(Math.random() * width) - widthElement;
+  let y = Math.round(Math.random() * height.top - heightElement);
   rectangle.style.transform = `translate3d(${x}px,${y}px,0)`;
   document.body.appendChild(rectangle);
-  setTimeout(() => animateRectangle(rectangle),1000);
+  setTimeout(() => animateRectangle(rectangle, widthElement, heightElement, timeEl), timeEl / 5);
 }
-function animateRectangle(rectangle) {
-  let width = window.innerWidth;
-  let height = window.innerHeight;
-  let x = Math.round(Math.random()*width)-250;
-  let y = Math.round(Math.random()*height)-150;
+function animateRectangle(rectangle, widthElement, heightElement, time) {
+  let timeEl = time;
+  let x = Math.round(Math.random() * width) - widthElement;
+  let y = Math.round(Math.random() * height.top - heightElement);
   rectangle.style.transform = `translate3d(${x}px,${y}px,0)`;
   rectangle.style.opacity = 1;
-  setTimeout(() => animateRectangle(rectangle,x,y),100000);
+  setTimeout(() => animateRectangle(rectangle, x, y, timeEl), timeEl);
 }
 export default function init() {
-  for(let i = 0; i < 50; i++){
-    createRectangle();
-  } 
+  width = window.innerWidth;
+  footer = document.querySelector('footer');
+  height = footer.getBoundingClientRect();
+  for (let i = 0; i < 50; i++) {
+    let time = Math.round(Math.random() * 40000 + 10000);
+    createRectangle(time);
+  }
 }
