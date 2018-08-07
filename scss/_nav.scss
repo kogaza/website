@@ -99,9 +99,10 @@ nav {
 @media screen and (max-width: 640px) {
   nav {
     li {
+    padding: 15px 0;
     margin: 10px;
-    width: 20%;
-    font-size: 14px;
+    width: 25%;
+    font-size: 20px;
     }
   }
 }

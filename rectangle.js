@@ -11,6 +11,9 @@ function createRectangle(time) {
   rectangle.style.height = `${heightElement}px`;
   let x = Math.round(Math.random() * width) - widthElement;
   let y = Math.round(Math.random() * height.top - heightElement);
+  if(screen.width < 640){
+    y = Math.round(Math.random() * height.top - 2*heightElement);
+  }
   rectangle.style.transform = `translate3d(${x}px,${y}px,0)`;
   document.body.appendChild(rectangle);
   setTimeout(() => animateRectangle(rectangle, widthElement, heightElement, timeEl), timeEl / 5);

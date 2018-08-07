@@ -32,7 +32,8 @@
   background-size: cover; }
 
 .belt {
-  animation: start-height 0.5s linear forwards; }
+  height: 79px;
+  animation: start-height 0.5s linear both 4s; }
 
 @keyframes start-height {
   from {
@@ -40,14 +41,17 @@
   to {
     height: 79px; } }
 
-.hidden-belt {
-  animation: move-height 0.5s linear forwards; }
+.belt-color1 {
+  animation: belt-color1 0.5s linear forwards; }
 
-@keyframes move-height {
+.belt-color2 {
+  animation: belt-color1 0.5s linear forwards reverse; }
+
+@keyframes belt-color1 {
   from {
-    height: 79px; }
+    background-color: white; }
   to {
-    height: 0; } }
+    background-color: rgba(38, 125, 232, 0.6); } }
 
 @media screen and (max-width: 640px) {
   .about-me {
@@ -55,15 +59,16 @@
     .about-me .small-width article {
       width: 380px;
       height: 200px;
-      font-size: 13px;
-      padding: 3%; }
+      font-size: 15px;
+      padding: 5px; }
   .belt {
+    height: 25px;
     animation: start-height 0.5s linear forwards; }
   @keyframes start-height {
     from {
       height: 0; }
     to {
-      height: 39px; } } }
+      height: 25px; } } }
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .about-me {
@@ -74,12 +79,13 @@
       font-size: 17px;
       padding: 4%; }
   .belt {
+    height: 25px;
     animation: start-height 0.5s linear forwards; }
   @keyframes start-height {
     from {
       height: 0; }
     to {
-      height: 39px; } } }
+      height: 25px; } } }
 
 * {
   box-sizing: border-box;
@@ -91,7 +97,11 @@
 
 body {
   overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-y: hidden; }
+
+@media screen and (max-width: 1024px) {
+  body {
+    overflow-y: auto; } }
 
 .page {
   margin: 0 auto;
@@ -149,22 +159,23 @@ canvas {
 
 .contacts .small-width {
   display: flex;
+  flex-wrap: wrap;
   width: 1024px;
   margin: 30px auto;
   justify-content: space-around; }
 
-.contacts div {
+.contacts .contacts-element {
   width: 22%;
   height: 50px;
   text-align: center;
   transition: 2s; }
-  .contacts div:nth-child(1) {
+  .contacts .contacts-element:nth-child(1) {
     animation: contacts1 1s linear both 3.5s; }
-  .contacts div:nth-child(2) {
+  .contacts .contacts-element:nth-child(2) {
     animation: contacts2 1s linear both 3.5s; }
-  .contacts div:nth-child(3) {
+  .contacts .contacts-element:nth-child(3) {
     animation: contacts3 1s linear both 3.5s; }
-  .contacts div:nth-child(4) {
+  .contacts .contacts-element:nth-child(4) {
     animation: contacts4 1s linear both 3.5s; }
 
 .contacts a {
@@ -366,7 +377,7 @@ canvas {
 @media screen and (max-width: 640px) {
   .contacts .small-width {
     margin: 10px auto; }
-  .contacts div {
+  .contacts .contacts-element {
     width: 24%;
     height: auto;
     font-size: 10px; } }
@@ -374,7 +385,7 @@ canvas {
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .contacts .small-width {
     margin: 10px auto; }
-  .contacts div {
+  .contacts .contacts-element {
     margin: 10px 0;
     width: 24%;
     height: auto;
@@ -590,9 +601,10 @@ nav li {
 
 @media screen and (max-width: 640px) {
   nav li {
+    padding: 15px 0;
     margin: 10px;
-    width: 20%;
-    font-size: 14px; } }
+    width: 25%;
+    font-size: 20px; } }
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   nav li {
@@ -621,15 +633,21 @@ nav li {
     cursor: pointer;
     transition: 1s;
     background-color: white; }
-    .projects article:nth-child(1) {
+    .projects article:nth-child(1), .projects article:last-child {
       width: 100%;
       text-align: center;
       border: 0;
-      background-color: inherit; }
+      background-color: inherit;
+      cursor: auto; }
     .projects article:nth-child(3) {
       animation: second-project 0.8s linear both 1.5s; }
     .projects article:nth-child(4) {
       animation: third-project 1.6s linear both 1.5s; }
+    .projects article:last-child a {
+      display: inline;
+      cursor: pointer; }
+    .projects article:last-child a:hover {
+      color: #FFEC0D; }
   .projects a {
     transition: 1s; }
     .projects a:hover {
@@ -692,12 +710,12 @@ nav li {
   background-color: rgba(38, 125, 232, 0.6);
   height: 550px; }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1023px) {
   .projects .small-width {
     max-width: 100%;
     width: auto; } }
 
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (max-width: 640px) {
   .projects .small-width {
     justify-content: center; }
   .projects article {
@@ -709,11 +727,11 @@ nav li {
   top: 100px;
   left: 100px;
   z-index: -1;
-  transition: transform 100s linear, opacity 2s linear 3s;
+  transition: transform 20s linear, opacity 2s linear 3s;
   opacity: 0; }
 
 .skills {
-  height: 300px;
+  height: 337.5px;
   padding-top: 25px;
   display: none; }
   .skills .small-width {
@@ -742,3 +760,9 @@ nav li {
 .blue-belt {
   background-color: rgba(38, 125, 232, 0.6);
   display: block; }
+
+@media screen and (max-width: 640px) {
+  .skills {
+    padding-top: 0; }
+  .small-width {
+    padding-bottom: 0; } }

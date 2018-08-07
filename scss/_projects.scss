@@ -22,17 +22,25 @@
     cursor: pointer;
     transition: 1s;
     background-color: $text-color-1;
-    &:nth-child(1) {
+    &:nth-child(1), &:last-child {
       width: 100%;
       text-align: center;
       border: 0;
       background-color: inherit;
+      cursor: auto;
     }
     &:nth-child(3){
       animation: second-project 0.8s linear both 1.5s;
     }
     &:nth-child(4){
       animation: third-project 1.6s linear both 1.5s;
+    }
+    &:last-child a {
+      display: inline;
+      cursor: pointer;
+    }
+    &:last-child a:hover {
+      color: #FFEC0D;
     }
   }
   a{
@@ -94,7 +102,7 @@
   background-color: $background-color-1;
   height: 550px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1023px) {
   .projects {
     .small-width {
     max-width: 100%;
@@ -102,7 +110,7 @@
     }
   }
 }
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (max-width: 640px) {
   .projects {
     .small-width {
     justify-content: center;

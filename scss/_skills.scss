@@ -1,7 +1,7 @@
 @import 'variables';
 
 .skills {
-  height: 300px;
+  height: 337.5px;
   padding-top: 25px;
   display: none;
   .small-width {
@@ -33,4 +33,13 @@
 .blue-belt {
   background-color: $background-color-1;
   display: block;
+}
+@media screen and (max-width: 640px) {
+  .skills {
+    padding-top: 0;
+  }
+  .small-width {
+    padding-bottom: 0;
+    // padding: 10px;
+  }
 }

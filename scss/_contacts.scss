@@ -3,11 +3,12 @@
 .contacts {
   .small-width {
     display: flex;
+    flex-wrap: wrap;
     width: 1024px;
     margin: 30px auto;
     justify-content: space-around;
   }
-  div {
+  .contacts-element {
     width: 22%;
     height: 50px;
     text-align: center;
@@ -326,7 +327,7 @@
       .small-width {
       margin: 10px auto;
       }
-      div {
+      .contacts-element {
         width: 24%;
         height: auto;
         font-size: 10px;
@@ -338,7 +339,7 @@
       .small-width {
       margin: 10px auto;
       }
-      div {
+      .contacts-element {
         margin: 10px 0;
         width: 24%;
         height: auto;
