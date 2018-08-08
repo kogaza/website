@@ -9,10 +9,11 @@ nav {
     background-color: $background-color-1;
     text-align: center;
     color: $text-color-1;
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
     margin: 25px;
-    width: 120px;
+    width: 210px;
+    font-size: 22px;
     transition: 1s;
     cursor: pointer;
     &:hover {

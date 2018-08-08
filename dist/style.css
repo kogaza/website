@@ -1,19 +1,18 @@
 .about-me {
-  height: 350px;
   background-color: rgba(38, 125, 232, 0.6);
   animation: about-me 0.5s linear both 3.5s; }
-  .about-me .small-width article {
-    width: 40%;
-    height: 300px;
-    font-size: 20px;
-    text-align: center;
-    padding: 3% 2%;
-    color: white; }
   .about-me .small-width {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     animation: about-me 0.5s linear both 3.5s; }
+    .about-me .small-width article {
+      width: 40%;
+      height: 300px;
+      font-size: 20px;
+      text-align: center;
+      padding: 3% 2%;
+      color: white; }
     .about-me .small-width .text {
       flex: 2;
       padding-left: 0;
@@ -39,14 +38,14 @@
   background-size: cover; }
 
 .belt {
-  height: 79px;
+  height: 40px;
   animation: start-height 0.5s linear both 4s; }
 
 @keyframes start-height {
   from {
     height: 0; }
   to {
-    height: 79px; } }
+    height: 40px; } }
 
 .belt-color1 {
   animation: belt-color1 0.5s linear forwards; }
@@ -56,18 +55,16 @@
 
 @keyframes belt-color1 {
   from {
-    background-color: white; }
+    background-color: rgba(255, 255, 255, 0.6); }
   to {
     background-color: rgba(38, 125, 232, 0.6); } }
 
 @media screen and (max-width: 640px) {
-  .about-me {
-    height: 200px; }
-    .about-me .small-width article {
-      width: 380px;
-      height: 200px;
-      font-size: 15px;
-      padding: 5px; }
+  .about-me .small-width article {
+    width: 380px;
+    height: 200px;
+    font-size: 15px;
+    padding: 5px; }
   .belt {
     height: 25px;
     animation: start-height 0.5s linear forwards; }
@@ -78,13 +75,11 @@
       height: 25px; } } }
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
-  .about-me {
-    height: 300px; }
-    .about-me .small-width article {
-      width: 380px;
-      height: 300px;
-      font-size: 17px;
-      padding: 4%; }
+  .about-me .small-width article {
+    width: 380px;
+    height: 300px;
+    font-size: 17px;
+    padding: 4%; }
   .belt {
     height: 25px;
     animation: start-height 0.5s linear forwards; }
@@ -134,7 +129,8 @@ body {
 
 @media screen and (max-width: 640px) {
   .small-width {
-    max-width: 100%; } }
+    max-width: 100%;
+    width: auto; } }
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .small-width {
@@ -185,7 +181,7 @@ canvas {
   background-color: rgba(38, 125, 232, 0.6);
   border-radius: 5px;
   cursor: pointer;
-  padding: 3px 0;
+  padding: 5px 0;
   text-decoration: none;
   color: white;
   transition: 1s; }
@@ -328,8 +324,8 @@ canvas {
       background-color: rgba(38, 125, 232, 0.6);
       color: white; }
     to {
-      background-color: white;
-      color: rgba(38, 125, 232, 0.6); } }
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #267de8; } }
   .contact-move1-remove {
     animation: contact-move1-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
   @keyframes contact-move1-remove {
@@ -372,8 +368,8 @@ canvas {
       transform: translate(0, 0) scale(1); } }
   @keyframes color-contacts-back {
     from {
-      background-color: white;
-      color: rgba(38, 125, 232, 0.6); }
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #267de8; }
     to {
       background-color: rgba(38, 125, 232, 0.6); } } }
 
@@ -492,7 +488,7 @@ canvas {
       background-color: rgba(38, 125, 232, 0.6); } } }
 
 footer {
-  padding: 20px;
+  padding: 35px;
   background-color: rgba(38, 125, 232, 0.6);
   display: flex;
   justify-content: center;
@@ -517,12 +513,25 @@ footer {
 
 header {
   background-color: rgba(38, 125, 232, 0.6);
+  display: flex;
   color: #FFEC0D;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   animation: title 0.5s linear both 4s; }
-  header h1 {
-    font-size: 30px; }
+  header .small-width {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 31px; }
+    header .small-width div {
+      display: flex;
+      flex-direction: row; }
+    header .small-width .title1 {
+      font-size: 50px; }
+    header .small-width .title2 {
+      font-size: 35px; }
+    header .small-width .title3 {
+      font-size: 23px; }
 
 @keyframes title {
   from {
@@ -531,12 +540,14 @@ header {
     transform: scale(1); } }
 
 @media screen and (max-width: 640px) {
-  header h1 {
-    font-size: 18px; } }
-
-@media screen and (min-width: 641px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 24px; } }
+  header .small-width {
+    line-height: 20px; }
+    header .small-width .title1 {
+      font-size: 30px; }
+    header .small-width .title2 {
+      font-size: 20px; }
+    header .small-width .title3 {
+      font-size: 12px; } }
 
 nav ul {
   display: flex;
@@ -546,10 +557,11 @@ nav li {
   background-color: rgba(38, 125, 232, 0.6);
   text-align: center;
   color: white;
-  padding: 5px;
+  padding: 15px;
   border-radius: 5px;
   margin: 25px;
-  width: 120px;
+  width: 210px;
+  font-size: 22px;
   transition: 1s;
   cursor: pointer; }
   nav li:hover {
@@ -691,14 +703,20 @@ nav li {
   display: flex;
   flex-direction: row;
   opacity: 0.2;
-  animation: projects1 1.5s linear both; }
+  animation: projects1 1.5s linear both, projects1-move-down 1s linear forwards 3.5s; }
 
 @keyframes projects1 {
   from {
-    transform: translateX(-1500px); }
+    transform: translate(-1500px, -300px); }
   to {
-    transform: translateX(0);
+    transform: translate(0, -300px);
     opacity: 1; } }
+
+@keyframes projects1-move-down {
+  from {
+    transform: translate(0, -300px); }
+  to {
+    transform: translate(0, 0); } }
 
 .bg-projects {
   opacity: 1; }
@@ -714,14 +732,12 @@ nav li {
     width: 60%; } }
 
 .rectangle-div {
-  background-color: rgba(176, 208, 247, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   width: 99vw;
   height: 99vh;
-  z-index: -1;
-  border: 5px solid red; }
+  z-index: -1; }
 
 .rectangle {
   background-color: rgba(176, 208, 247, 0.3);

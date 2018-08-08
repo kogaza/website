@@ -294,8 +294,8 @@ function animateRectangle(rectangle, widthElement, heightElement, time) {
   }, timeEl);
 }
 function init() {
-  width = window.innerWidth;
   height = window.innerHeight;
+  width = window.innerWidth;
   for (var i = 0; i < 50; i++) {
     var time = Math.round(Math.random() * 40000 + 10000);
     createRectangle(time);
