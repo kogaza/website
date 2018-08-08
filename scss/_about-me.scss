@@ -17,6 +17,15 @@
     flex-direction: row;
     justify-content: space-around;
     animation: about-me 0.5s linear both 3.5s;
+    .text {
+      flex: 2;
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+    }
+    p {
+      line-height: 25px;
+    }
   }
 }
 @keyframes about-me {

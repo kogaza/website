@@ -260,7 +260,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = init;
 
 var width = void 0,
-    footer = void 0,
     height = void 0;
 
 function createRectangle(time) {
@@ -271,21 +270,23 @@ function createRectangle(time) {
   rectangle.style.width = widthElement + 'px';
   var heightElement = Math.round(Math.random() * 200 + 50);
   rectangle.style.height = heightElement + 'px';
-  var x = Math.round(Math.random() * width) - widthElement;
-  var y = Math.round(Math.random() * height.top - heightElement);
-  if (screen.width < 640) {
-    y = Math.round(Math.random() * height.top - 2 * heightElement);
-  }
+  var topPosition = Math.round(Math.random() * (width - widthElement));
+  rectangle.style.top = topPosition + 'px';
+  var left = Math.round(Math.random() * (height - heightElement));
+  rectangle.style.left = left + 'px';
+  var x = Math.round(Math.random() * (width - widthElement));
+  var y = Math.round(Math.random() * (height - heightElement));
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
-  document.body.appendChild(rectangle);
+  var rectangleDiv = document.querySelector('.rectangle-div');
+  rectangleDiv.appendChild(rectangle);
   setTimeout(function () {
     return animateRectangle(rectangle, widthElement, heightElement, timeEl);
   }, timeEl / 5);
 }
 function animateRectangle(rectangle, widthElement, heightElement, time) {
   var timeEl = time;
-  var x = Math.round(Math.random() * width) - widthElement;
-  var y = Math.round(Math.random() * height.top - heightElement);
+  var x = Math.round(Math.random() * (width - widthElement));
+  var y = Math.round(Math.random() * (height - heightElement));
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   rectangle.style.opacity = 1;
   setTimeout(function () {
@@ -294,8 +295,7 @@ function animateRectangle(rectangle, widthElement, heightElement, time) {
 }
 function init() {
   width = window.innerWidth;
-  footer = document.querySelector('footer');
-  height = footer.getBoundingClientRect();
+  height = window.innerHeight;
   for (var i = 0; i < 50; i++) {
     var time = Math.round(Math.random() * 40000 + 10000);
     createRectangle(time);

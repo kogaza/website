@@ -102,15 +102,15 @@
   background-color: $background-color-1;
   height: 550px;
 }
+// @media screen and (max-width: 1023px) {
+//   .projects {
+//     .small-width {
+//     max-width: 100%;
+//     width: auto;
+//     }
+//   }
+// }
 @media screen and (max-width: 1023px) {
-  .projects {
-    .small-width {
-    max-width: 100%;
-    width: auto;
-    }
-  }
-}
-@media screen and (max-width: 640px) {
   .projects {
     .small-width {
     justify-content: center;

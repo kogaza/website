@@ -96,22 +96,13 @@ nav {
     scale(1);
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1023px) {
   nav {
     li {
     padding: 15px 0;
     margin: 10px;
     width: 25%;
     font-size: 20px;
-    }
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1024px) {
-  nav {
-    li {
-    margin: 20px;
-    width: 20%;
-    font-size: 18px;
     }
   }
 }
