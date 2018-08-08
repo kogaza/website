@@ -152,7 +152,6 @@ menu[0].addEventListener('click', function () {
       contactsElements[_i2].style.width = '40%';
       contacts[_i2].style.height = '60px';
       contacts[_i2].style.fontSize = '19px';
-
       if (_i2 > 1) {
         contactsElements[_i2].style.marginTop = '10px';
       }

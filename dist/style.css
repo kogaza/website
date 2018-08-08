@@ -695,7 +695,14 @@ nav li {
     transform: translate(0, 0); } }
 
 .hide-projects {
-  height: 0; }
+  height: 0;
+  transform: scale(0); }
+
+@keyframes hide-projects {
+  from {
+    transform: translate(100px, -300px); }
+  to {
+    transform: translate(0, -500px); } }
 
 .projects-and-canvas {
   width: 1524px;
