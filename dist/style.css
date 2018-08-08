@@ -743,7 +743,7 @@ nav li {
   background-color: rgba(176, 208, 247, 0.3);
   position: absolute;
   z-index: -1;
-  transition: transform 20s linear, opacity 2s linear 3s;
+  transition: transform 50s linear, opacity 2s linear 3s;
   opacity: 0; }
 
 .skills {

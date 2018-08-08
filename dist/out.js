@@ -272,25 +272,31 @@ function createRectangle(time) {
   rectangle.style.height = heightElement + 'px';
   var topPosition = Math.round(Math.random() * (width - widthElement));
   rectangle.style.top = topPosition + 'px';
-  var left = Math.round(Math.random() * (height - heightElement));
-  rectangle.style.left = left + 'px';
-  var x = Math.round(Math.random() * (width - widthElement));
-  var y = Math.round(Math.random() * (height - heightElement));
+  var leftPosition = Math.round(Math.random() * (height - heightElement));
+  rectangle.style.left = leftPosition + 'px';
+  var x = Math.round(Math.random() * (width - widthElement) - widthElement);
+  var y = Math.round(Math.random() * (height - heightElement) - heightElement);
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   var rectangleDiv = document.querySelector('.rectangle-div');
   rectangleDiv.appendChild(rectangle);
+  var actualPositionX = leftPosition + x * (timeEl / 50);
+  var actualPositionY = topPosition + y * (timeEl / 50);
   setTimeout(function () {
-    return animateRectangle(rectangle, widthElement, heightElement, timeEl);
+    return animateRectangle(rectangle, widthElement, heightElement, actualPositionX, actualPositionY, timeEl);
   }, timeEl / 5);
 }
-function animateRectangle(rectangle, widthElement, heightElement, time) {
+function animateRectangle(rectangle, widthElement, heightElement, actualPositionX, actualPositionY, time) {
+  var startPositionX = actualPositionX;
+  var startPositionY = actualPositionY;
   var timeEl = time;
-  var x = Math.round(Math.random() * (width - widthElement));
-  var y = Math.round(Math.random() * (height - heightElement));
+  var x = Math.round(Math.random() * (width - widthElement) - widthElement);
+  var y = Math.round(Math.random() * (height - heightElement) - heightElement);
   rectangle.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
   rectangle.style.opacity = 1;
+  var actualPosX = startPositionX + x * (timeEl / 50);
+  var actualPosY = startPositionY + y * (timeEl / 50);
   setTimeout(function () {
-    return animateRectangle(rectangle, x, y, timeEl);
+    return animateRectangle(rectangle, x, y, actualPosX, actualPosY, timeEl);
   }, timeEl);
 }
 function init() {
