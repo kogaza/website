@@ -87,9 +87,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var projectsBackground = document.querySelector('.projects');
 var projects = document.querySelector('.projects .small-width');
 var projectsArticles = projects.querySelectorAll('article');
-var belt = document.querySelector('.belt');
+var belt = document.querySelectorAll('.belt');
 var skillsBackground = document.querySelector('.skills');
 var skills = document.querySelector('.skills .small-width');
+var aboutmeBackground = document.querySelector('.about-me');
 var aboutme = document.querySelectorAll('.about-me article');
 var contacts = document.querySelectorAll('.contacts a');
 var contactsElements = document.querySelectorAll('.contacts-element');
@@ -105,8 +106,8 @@ menu[0].addEventListener('click', function () {
         aboutme[i].classList.remove("hide-elem");
       }
     }
-    belt.classList.remove("belt-color1");
-    belt.classList.add("belt-color2");
+    belt[0].classList.remove("belt-color1");
+    belt[0].classList.add("belt-color2");
     skillsBackground.classList.add("blue-belt");
     skills.classList.add("show-elem");
     skills.classList.remove("hide-elem");
@@ -133,27 +134,21 @@ menu[0].addEventListener('click', function () {
       contacts[3].classList.remove('contact-move4');
       contacts[3].classList.add('contact-move4-remove');
     }
+  } else {
+    for (var _i = 0; _i < aboutme.length; _i++) {
+      aboutme[_i].classList.remove('hide-elem');
+      if (_i < belt.length) {
+        belt[_i].style.display = 'block';
+      }
+    }
+    skills.classList.add("show-elem");
+    skills.classList.remove("hide-elem");
+    skillsBackground.style.cssText = '';
+    aboutmeBackground.style.cssText = '';
+    for (var _i2 = 1; _i2 < projectsArticles.length - 1; _i2++) {
+      projectsArticles[_i2].style.cssText = '';
+    }
   }
-  // else {
-  //   skillsBackground.classList.add("blue-belt");
-  //   skills.classList.add("show-elem");
-  //   skills.classList.remove("hide-elem");
-  //   let skillsBelt = document.createElement('div');
-  //   skillsBelt.className = 'belt';
-  //   skillsBelt.style.backgroundColor = 'white';
-  //   skillsBackground.appendChild(skillsBelt);
-  //   for(let i = 1; i < projectsArticles.length - 1; i++){
-  //     projectsArticles[i].style.width = '31%';
-  //   }
-  //   for(let i = 0; i < contactsElements.length; i++) {
-  //     contactsElements[i].style.width = '40%';
-  //     contacts[i].style.height = '60px';
-  //     contacts[i].style.fontSize = '19px';
-  //     if(i > 1) {
-  //       contactsElements[i].style.marginTop = '10px';
-  //     }
-  //   }
-  // }
 });
 menu[1].addEventListener('click', function () {
   if (screen.width >= 1024) {
@@ -194,27 +189,25 @@ menu[1].addEventListener('click', function () {
       contacts[3].classList.remove('contact-move4');
       contacts[3].classList.add('contact-move4-remove');
     }
-    belt.classList.remove("belt-color1");
-    belt.classList.add("belt-color2");
+    belt[0].classList.remove("belt-color1");
+    belt[0].classList.add("belt-color2");
     canvas.classList.remove("projects-and-canvas");
+  } else {
+    for (var _i3 = 0; _i3 < aboutme.length; _i3++) {
+      aboutme[_i3].classList.add('hide-elem');
+      if (_i3 < belt.length) {
+        belt[_i3].style.display = 'none';
+      }
+    }
+    skills.classList.remove("show-elem");
+    skills.classList.add("hide-elem");
+    skillsBackground.style.height = '0';
+    aboutmeBackground.style.height = '0';
+    projectsArticles[0].style.fontSize = '40px';
+    for (var _i4 = 1; _i4 < projectsArticles.length - 1; _i4++) {
+      projectsArticles[_i4].style.width = '60%';
+    }
   }
-  // else {
-  //   skillsBackground.classList.remove("blue-belt");
-  //   skills.classList.remove("show-elem");
-  //   skills.classList.add("hide-elem");
-  //   let belt = skillsBackground.querySelector('.belt');
-  //   skillsBackground.removeChild(belt);
-  //   for(let i = 1; i < projectsArticles.length - 1; i++){
-  //     projectsArticles[i].style.width = '60%';
-  //   }
-  //   for(let i = 0; i < contactsElements.length; i++) {
-  //     contactsElements[i].style.width = '24%';
-  //     contacts[i].style.cssText = '';     
-  //     if(i > 1) {
-  //       contactsElements[i].style.cssText = '';
-  //     }
-  //   }
-  // }
 });
 menu[2].addEventListener('click', function () {
   if (screen.width >= 1024) {
@@ -222,8 +215,8 @@ menu[2].addEventListener('click', function () {
     projects.classList.add("hide-elem");
     projects.classList.remove("show-elem");
     projects.classList.remove("bg-projects");
-    belt.classList.remove("belt-color2");
-    belt.classList.add("belt-color1");
+    belt[0].classList.remove("belt-color2");
+    belt[0].classList.add("belt-color1");
     for (var i = 0; i < aboutme.length; i++) {
       aboutme[i].classList.remove("show-elem");
       aboutme[i].classList.add("hide-elem");
