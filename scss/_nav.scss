@@ -21,7 +21,6 @@ nav {
       transition: 0.5s;
       color: #FFEC0D;
     }
-    
     &:nth-child(1) {
       animation: menu-li-1 1s linear both 3.5s;
     }
@@ -32,7 +31,6 @@ nav {
       animation: menu-li-3 1s linear both 3.5s;
     }
   }
-
 } 
 @keyframes menu-li-1 {
   0% {

@@ -137,6 +137,8 @@ menu[0].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  skills.classList.add("show-elem");
+  skills.classList.remove("hide-elem");
   if (screen.width >= 1024) {
     if (aboutme[0].classList.contains("hide-elem")) {
       for (var i = 0; i < aboutme.length; i++) {
@@ -147,8 +149,6 @@ menu[0].addEventListener('click', function () {
     belt[0].classList.remove("belt-color1");
     belt[0].classList.add("belt-color2");
     skillsBackground.classList.add("blue-belt");
-    skills.classList.add("show-elem");
-    skills.classList.remove("hide-elem");
     projectsBackground.classList.add("hide-projects");
     projectsBackground.classList.remove("blue-belt");
     projects.classList.add("hide-elem");
@@ -162,8 +162,6 @@ menu[0].addEventListener('click', function () {
         belt[_i2].style.display = 'block';
       }
     }
-    skills.classList.add("show-elem");
-    skills.classList.remove("hide-elem");
     skillsBackground.style.cssText = '';
     aboutmeBackground.style.cssText = '';
     for (var _i3 = 1; _i3 < projectsArticles.length; _i3++) {
@@ -198,10 +196,10 @@ menu[1].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  skills.classList.remove("show-elem");
+  skills.classList.add("hide-elem");
   if (screen.width >= 1024) {
     skillsBackground.classList.remove("blue-belt");
-    skills.classList.remove("show-elem");
-    skills.classList.add("hide-elem");
     projectsBackground.classList.add("blue-belt");
     projectsBackground.classList.remove("hide-projects");
     if (projects.classList.contains("hide-elem")) {
@@ -230,8 +228,6 @@ menu[1].addEventListener('click', function () {
         belt[_i5].style.display = 'none';
       }
     }
-    skills.classList.remove("show-elem");
-    skills.classList.add("hide-elem");
     skillsBackground.style.height = '0';
     aboutmeBackground.style.height = '0';
     projectsArticles[0].style.fontSize = '40px';
@@ -243,8 +239,6 @@ menu[1].addEventListener('click', function () {
     skills.classList.remove("hide-elem");
     projects.classList.add("show-elem");
     projects.classList.remove("hide-elem");
-    // belt[1].style.cssText = '';
-    // belt[2].style.cssText = '';
     contactsSmall.classList.remove('blue-background');
     for (var _i7 = 0; _i7 < contacts.length; _i7++) {
       contactsElements[_i7].style.cssText = '';

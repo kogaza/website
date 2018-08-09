@@ -55,6 +55,8 @@ menu[0].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  skills.classList.add("show-elem");
+  skills.classList.remove("hide-elem");
   if (screen.width >= 1024) {
     if (aboutme[0].classList.contains("hide-elem")) {
       for (let i = 0; i < aboutme.length; i++) {
@@ -65,15 +67,12 @@ menu[0].addEventListener('click', function () {
     belt[0].classList.remove("belt-color1");
     belt[0].classList.add("belt-color2");
     skillsBackground.classList.add("blue-belt");
-    skills.classList.add("show-elem");
-    skills.classList.remove("hide-elem");
     projectsBackground.classList.add("hide-projects");
     projectsBackground.classList.remove("blue-belt");
     projects.classList.add("hide-elem");
     projects.classList.remove("show-elem");
     projects.classList.remove("bg-projects");
     canvas.classList.remove("projects-and-canvas");
-
   } else {
     for (let i = 0; i < aboutme.length; i++) {
       aboutme[i].classList.remove('hide-elem');
@@ -81,8 +80,6 @@ menu[0].addEventListener('click', function () {
         belt[i].style.display = 'block';
       }
     }
-    skills.classList.add("show-elem");
-    skills.classList.remove("hide-elem");
     skillsBackground.style.cssText = '';
     aboutmeBackground.style.cssText = '';
     for (let i = 1; i < projectsArticles.length; i++) {
@@ -117,10 +114,10 @@ menu[1].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  skills.classList.remove("show-elem");
+  skills.classList.add("hide-elem");
   if (screen.width >= 1024) {
     skillsBackground.classList.remove("blue-belt");
-    skills.classList.remove("show-elem");
-    skills.classList.add("hide-elem");
     projectsBackground.classList.add("blue-belt");
     projectsBackground.classList.remove("hide-projects");
     if (projects.classList.contains("hide-elem")) {
@@ -149,8 +146,6 @@ menu[1].addEventListener('click', function () {
         belt[i].style.display = 'none';
       }
     }
-    skills.classList.remove("show-elem");
-    skills.classList.add("hide-elem");
     skillsBackground.style.height = '0';
     aboutmeBackground.style.height = '0';
     projectsArticles[0].style.fontSize = '40px';
@@ -162,8 +157,6 @@ menu[1].addEventListener('click', function () {
     skills.classList.remove("hide-elem");
     projects.classList.add("show-elem");
     projects.classList.remove("hide-elem");
-    // belt[1].style.cssText = '';
-    // belt[2].style.cssText = '';
     contactsSmall.classList.remove('blue-background');
     for (let i = 0; i < contacts.length; i++) {
       contactsElements[i].style.cssText = '';
@@ -226,5 +219,4 @@ menu[2].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4-remove');
     contacts[3].classList.add('contact-move4');
   }
-
 })
