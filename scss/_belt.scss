@@ -4,6 +4,9 @@
   height: 40px;
   animation: start-height 0.5s linear both 4s;
 }
+.belt3 {
+  display: none;
+}
 @keyframes start-height {
   from {height: 0}
   to {height: 40px}
