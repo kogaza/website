@@ -3,8 +3,6 @@
 .about-me {
   background-color: $background-color-1;
   animation: about-me 0.5s linear both 3.5s;
-  
-
   .small-width {
     display: flex;
     flex-direction: row;
@@ -47,59 +45,35 @@
   background-image: url('../images/cv.jpg');
   background-size: cover;
 }
-.belt {
-  height: 40px;
-  animation: start-height 0.5s linear both 4s;
-}
-@keyframes start-height {
-  from {height: 0}
-  to {height: 40px}
-}
-.belt-color1 {
-  animation: belt-color1 0.5s linear forwards;
-}
-.belt-color2 {
-  animation: belt-color1 0.5s linear forwards reverse;
-}
-@keyframes belt-color1 {
-  from {background-color: $background-color-2}
-  to {background-color: $background-color-1}
-}
-@media screen and (max-width: 640px) {
-  .about-me {
-    .small-width article {
-      width: 380px;
-      height: 200px; 
-      font-size: 15px;
-      padding: 5px;
-    }
-  }
-  .belt {
-    height: 25px;
-    animation: start-height 0.5s linear forwards;
-  }
-  @keyframes start-height {
-    from {height: 0}
-    to {height: 25px}
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+// @media screen and (max-width: 640px) {
+//   .about-me {
+//     .small-width article {
+//       width: 380px;
+//       height: 200px; 
+//       padding: 5px;
+//     }
+//     .text {
+//       font-size: 24px;
+//     }
+//     p {
+//       line-height: 30px;
+//     }
+//   }
+// }
+@media screen and (max-width: 1024px) {
   .about-me {
     .small-width {
       article {
       width: 380px;
       height: 300px; 
-      font-size: 17px;
       padding: 4%;
       }
+      .text {
+        font-size: 24px;
+      }
+      p {
+        line-height: 30px;
+      }
     }
-  }
-  .belt {
-    height: 25px;
-    animation: start-height 0.5s linear forwards;
-  }
-  @keyframes start-height {
-    from {height: 0}
-    to {height: 25px}
   }
 }

@@ -3,9 +3,7 @@
 .skills {
   height: 337.5px;
   padding-top: 25px;
-  display: none;
   .small-width {
-    transform: scale(0);
     width: 1024px;
     margin: 0 auto;
     font-size: 20px;
@@ -26,20 +24,52 @@
     width: 40%; 
   }
 }
-.skills-background {
-  background-color: $background-color-1;
-  display: block;
-}
-.blue-belt {
-  background-color: $background-color-1;
-  display: block;
-}
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .skills {
-    padding-top: 0;
+    height: auto;
+    background-color: $background-color-1;
+    color: $text-color-2;
+    animation: show-skills 1s linear both 3.5s; 
+    .small-width {
+      font-size: 24px;
+      line-height: 40px;
+    }
   }
-  .small-width {
-    padding-bottom: 0;
-    // padding: 10px;
+  @keyframes show-skills {
+    0% {
+      transform: translateY(-100px) scale(0);
+      opacity: 0;
+      background-color: $background-color-2;
+    }
+    60% {
+      transform: translateY(-100px) scale(1);
+      opacity: 0;
+      background-color: $background-color-2;
+    }
+    80% {
+      transform: translateY(-50px) scale(1);
+      opacity: 0.7;
+      background-color: $background-color-2;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
   }
+}
+@media screen and (min-width: 1024px) {
+  .skills {
+    display: none;
+    .small-width {
+      transform: scale(0);
+    }
+  }
+  .skills-background {
+    background-color: $background-color-1;
+    display: block;
+  }
+  .blue-belt {
+    background-color: $background-color-1;
+    display: block;
+  }
+
 }

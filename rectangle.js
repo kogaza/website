@@ -1,5 +1,5 @@
 
-let width, height;
+let width, height, numberOfRectangles;
 
 function createRectangle(time) {
   let timeEl = time;
@@ -51,7 +51,8 @@ function animateRectangle(
 export default function init() {
   height = window.innerHeight;
   width = window.innerWidth;
-  for (let i = 0; i < 200; i++) {
+  width < 1024 ? numberOfRectangles = 100 : numberOfRectangles = 200;
+  for (let i = 0; i < numberOfRectangles; i++) {
     let time = Math.round(Math.random() * 25000 + 25000);
     createRectangle(time);
   }
