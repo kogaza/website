@@ -100,24 +100,35 @@ var canvas = document.querySelector('.projects-and-canvas');
 var seeMore = document.querySelector('.see-more');
 (0, _rectangle2.default)();
 
+for (var i = 4; i < projectsArticles.length - 1; i++) {
+  projectsArticles[i].style.display = 'none';
+}
+
 var menu = document.querySelectorAll('ul>li');
 seeMore.addEventListener('click', function () {
-  if (screen.width >= 1024) {} else {
-    for (var i = 0; i < aboutme.length; i++) {
-      aboutme[i].classList.add('hide-elem');
-      if (i < belt.length) {
-        belt[i].style.display = 'none';
-      }
+  aboutmeBackground.style.height = '0';
+  projectsArticles[projectsArticles.length - 1].style.display = 'none';
+  for (var _i = 0; _i < aboutme.length; _i++) {
+    aboutme[_i].classList.add('hide-elem');
+    if (_i < belt.length) {
+      belt[_i].style.display = 'none';
     }
+  }
+  for (var _i2 = 1; _i2 < projectsArticles.length - 1; _i2++) {
+    if (_i2 >= 4) {
+      projectsArticles[_i2].style.cssText = '';
+    }
+    if (screen.width >= 1024) {
+      projectsArticles[_i2].style.width = '45%';
+    } else {
+      projectsArticles[_i2].style.width = '60%';
+    }
+  }
+  if (screen.width >= 1024) {} else {
     skills.classList.remove("show-elem");
     skills.classList.add("hide-elem");
     skillsBackground.style.height = '0';
-    aboutmeBackground.style.height = '0';
     projectsArticles[0].style.fontSize = '40px';
-    projectsArticles[projectsArticles.length - 1].style.display = 'none';
-    for (var _i = 1; _i < projectsArticles.length - 1; _i++) {
-      projectsArticles[_i].style.width = '60%';
-    }
   }
 });
 menu[0].addEventListener('click', function () {
@@ -137,13 +148,18 @@ menu[0].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+
   skills.classList.add("show-elem");
   skills.classList.remove("hide-elem");
+  aboutmeBackground.style.cssText = '';
+  for (var _i3 = 0; _i3 < belt.length; _i3++) {
+    belt[_i3].style.cssText = '';
+  }
   if (screen.width >= 1024) {
     if (aboutme[0].classList.contains("hide-elem")) {
-      for (var i = 0; i < aboutme.length; i++) {
-        aboutme[i].classList.add("show-elem");
-        aboutme[i].classList.remove("hide-elem");
+      for (var _i4 = 0; _i4 < aboutme.length; _i4++) {
+        aboutme[_i4].classList.add("show-elem");
+        aboutme[_i4].classList.remove("hide-elem");
       }
     }
     belt[0].classList.remove("belt-color1");
@@ -156,27 +172,28 @@ menu[0].addEventListener('click', function () {
     projects.classList.remove("bg-projects");
     canvas.classList.remove("projects-and-canvas");
   } else {
-    for (var _i2 = 0; _i2 < aboutme.length; _i2++) {
-      aboutme[_i2].classList.remove('hide-elem');
-      if (_i2 < belt.length) {
-        belt[_i2].style.display = 'block';
+    for (var _i5 = 1; _i5 < projectsArticles.length; _i5++) {
+      projectsArticles[_i5].style.cssText = '';
+      if (_i5 >= 4 && _i5 < projectsArticles.length - 1) {
+        projectsArticles[_i5].style.display = 'none';
       }
     }
-    skillsBackground.style.cssText = '';
-    aboutmeBackground.style.cssText = '';
-    for (var _i3 = 1; _i3 < projectsArticles.length; _i3++) {
-      projectsArticles[_i3].style.cssText = '';
+  }
+  for (var _i6 = 0; _i6 < aboutme.length; _i6++) {
+    aboutme[_i6].classList.remove('hide-elem');
+    if (_i6 < belt.length) {
+      belt[_i6].style.display = 'block';
     }
-    skills.classList.add("show-elem");
-    skills.classList.remove("hide-elem");
-    projects.classList.add("show-elem");
-    projects.classList.remove("hide-elem");
-    belt[1].style.cssText = '';
-    belt[2].style.cssText = '';
-    contactsSmall.classList.remove('blue-background');
-    for (var _i4 = 0; _i4 < contacts.length; _i4++) {
-      contactsElements[_i4].style.cssText = '';
-    }
+  }
+  projectsBackground.style.cssText = '';
+  skillsBackground.style.cssText = '';
+  skills.classList.add("show-elem");
+  skills.classList.remove("hide-elem");
+  projects.classList.add("show-elem");
+  projects.classList.remove("hide-elem");
+  contactsSmall.classList.remove('blue-background');
+  for (var _i7 = 0; _i7 < contacts.length; _i7++) {
+    contactsElements[_i7].style.cssText = '';
   }
 });
 menu[1].addEventListener('click', function () {
@@ -196,8 +213,6 @@ menu[1].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
-  skills.classList.remove("show-elem");
-  skills.classList.add("hide-elem");
   if (screen.width >= 1024) {
     skillsBackground.classList.remove("blue-belt");
     projectsBackground.classList.add("blue-belt");
@@ -212,36 +227,41 @@ menu[1].addEventListener('click', function () {
       skills.classList.remove("show-elem");
       skills.classList.remove("skills-background");
     }
-    if (aboutme[0].classList.contains("hide-elem")) {
-      for (var i = 0; i < aboutme.length; i++) {
-        aboutme[i].classList.add("show-elem");
-        aboutme[i].classList.remove("hide-elem");
-      }
-    };
     belt[0].classList.remove("belt-color1");
     belt[0].classList.add("belt-color2");
     canvas.classList.remove("projects-and-canvas");
   } else {
-    for (var _i5 = 0; _i5 < aboutme.length; _i5++) {
-      aboutme[_i5].classList.add('hide-elem');
-      if (_i5 < belt.length) {
-        belt[_i5].style.display = 'none';
+    for (var _i8 = 0; _i8 < belt.length; _i8++) {
+      belt[_i8].style.cssText = '';
+    }
+    for (var _i9 = 0; _i9 < aboutme.length; _i9++) {
+      aboutme[_i9].classList.add('hide-elem');
+      aboutme[_i9].classList.remove('show-elem');
+      if (_i9 < belt.length) {
+        belt[_i9].style.display = 'none';
       }
+    }
+    for (var _i10 = 1; _i10 < projectsArticles.length - 1; _i10++) {
+      if (_i10 >= 4) {
+        projectsArticles[_i10].style.cssText = '';
+      }
+      projectsArticles[_i10].style.width = '60%';
     }
     skillsBackground.style.height = '0';
     aboutmeBackground.style.height = '0';
+    projectsBackground.style.cssText = '';
     projectsArticles[0].style.fontSize = '40px';
     projectsArticles[projectsArticles.length - 1].style.display = 'none';
-    for (var _i6 = 1; _i6 < projectsArticles.length - 1; _i6++) {
-      projectsArticles[_i6].style.width = '60%';
+    for (var _i11 = 1; _i11 < projectsArticles.length - 1; _i11++) {
+      projectsArticles[_i11].style.width = '60%';
     }
     skills.classList.add("show-elem");
     skills.classList.remove("hide-elem");
     projects.classList.add("show-elem");
     projects.classList.remove("hide-elem");
     contactsSmall.classList.remove('blue-background');
-    for (var _i7 = 0; _i7 < contacts.length; _i7++) {
-      contactsElements[_i7].style.cssText = '';
+    for (var _i12 = 0; _i12 < contacts.length; _i12++) {
+      contactsElements[_i12].style.cssText = '';
     }
   }
 });
@@ -269,18 +289,19 @@ menu[2].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4-remove');
     contacts[3].classList.add('contact-move4');
   } else {
-    for (var _i8 = 0; _i8 < aboutme.length; _i8++) {
-      aboutme[_i8].classList.remove('hide-elem');
-      if (_i8 < belt.length) {
-        belt[_i8].style.display = 'block';
+    for (var _i13 = 0; _i13 < aboutme.length; _i13++) {
+      aboutme[_i13].classList.remove('hide-elem');
+      if (_i13 < belt.length) {
+        belt[_i13].style.display = 'block';
       }
     }
+    projectsBackground.style.height = '300px';
     skills.classList.add("show-elem");
     skills.classList.remove("hide-elem");
     skillsBackground.style.cssText = '';
     aboutmeBackground.style.cssText = '';
-    for (var _i9 = 1; _i9 < projectsArticles.length; _i9++) {
-      projectsArticles[_i9].style.cssText = '';
+    for (var _i14 = 1; _i14 < projectsArticles.length; _i14++) {
+      projectsArticles[_i14].style.cssText = '';
     }
     skills.classList.remove("show-elem");
     skills.classList.add("hide-elem");
@@ -289,8 +310,8 @@ menu[2].addEventListener('click', function () {
     belt[1].style.display = 'none';
     belt[2].style.display = 'block';
     contactsSmall.classList.add('blue-background');
-    for (var _i10 = 0; _i10 < contacts.length; _i10++) {
-      contactsElements[_i10].style.width = '60%';
+    for (var _i15 = 0; _i15 < contacts.length; _i15++) {
+      contactsElements[_i15].style.width = '60%';
     }
     contacts[0].classList.remove('contact-move1-remove');
     contacts[0].classList.add('contact-move1');
