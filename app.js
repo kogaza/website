@@ -1,9 +1,11 @@
 import rectangle from './rectangle'
+import { format } from 'url';
 
 const projectsBackground = document.querySelector('.projects');
 const projects = document.querySelector('.projects .small-width');
 const projectsArticles = projects.querySelectorAll('article');
 const belt = document.querySelectorAll('.belt');
+const beltMobile = document.querySelector('.belt-mobile');
 const skillsBackground = document.querySelector('.skills');
 const skills = document.querySelector('.skills .small-width');
 const aboutmeBackground = document.querySelector('.about-me');
@@ -127,6 +129,7 @@ if (screen.width >= 1024) {
     projectsArticles[5].style.display = 'none';
   })
   menu[2].addEventListener('click', function () {
+    // if (screen.width >= 1024) {
     canvas.classList.remove("projects-and-canvas");
     projects.classList.add("hide-elem");
     projects.classList.remove("show-elem");
@@ -168,9 +171,10 @@ if (screen.width >= 1024) {
       skillsBackground.style.cssText = '';
       projectsBackground.style.cssText = '';
       contactsBackground.style.cssText = '';
-      for(let i = 0; i < 4; i++) {
-        belt[i].style.cssText = '';
-      }
+      belt[0].style.cssText = '';
+      belt[1].style.cssText = '';
+      belt[2].style.cssText = '';
+      beltMobile.style.cssText = '';
     }
   })
   navLi[1].addEventListener('click', function () {
@@ -191,9 +195,10 @@ if (screen.width >= 1024) {
       skillsBackground.style.display = 'none';
       projectsBackground.style.display = 'none';
       contactsBackground.style.display = 'block';
-      for(let i = 0; i < 4; i++) {
-        belt[i].style.display = 'none';
-      }
+      belt[0].style.display = 'none';
+      belt[1].style.display = 'none';
+      belt[2].style.display = 'none';
+      beltMobile.style.display = 'none';
     }
   })
 
