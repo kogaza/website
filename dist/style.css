@@ -612,14 +612,31 @@ header {
     display: none;
     background-color: rgba(38, 125, 232, 0.6); }
     .projects article {
-      width: 60%; }
+      width: 60%;
+      height: 60%; }
       .projects article:nth-child(1) {
         width: 100%;
         text-align: center;
         border: 0;
-        cursor: auto; }
+        cursor: auto;
+        animation: mobile-projects 1s linear both; }
       .projects article:last-child {
-        display: none; } }
+        display: none; }
+      .projects article:nth-child(2) {
+        animation: mobile-projects 1s linear both 0.2s; }
+      .projects article:nth-child(3) {
+        animation: mobile-projects 1s linear both 0.4s; }
+      .projects article:nth-child(4) {
+        animation: mobile-projects 1s linear both 0.6s; }
+      .projects article:nth-child(5) {
+        animation: mobile-projects 1s linear both 0.8s; }
+  @keyframes mobile-projects {
+    0% {
+      transform: translateY(500px); }
+    80% {
+      transform: translateY(-20px); }
+    100% {
+      transform: translateY(0); } } }
 
 @media screen and (min-width: 1025px) {
   .projects {
