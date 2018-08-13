@@ -22,26 +22,35 @@ for (let i = 4; i < projectsArticles.length - 1; i++) {
 
 const menu = document.querySelectorAll('ul>li');
 seeMore.addEventListener('click', function () {
-  aboutmeBackground.style.height = '0';
-  projectsArticles[projectsArticles.length - 1].style.display = 'none';
-  for (let i = 0; i < aboutme.length; i++) {
-    aboutme[i].classList.add('hide-elem');
-    if (i < belt.length) {
-      belt[i].style.display = 'none';
+
+  if (screen.width >= 1024) {
+    belt[0].classList.remove("belt-color2");
+    belt[0].classList.add("belt-color1");
+    for (var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.remove("show-elem");
+      aboutme[i].classList.add("hide-elem");
     }
-  }
-  for (let i = 1; i < projectsArticles.length - 1; i++) {
-    if (i >= 4) {
-      projectsArticles[i].style.cssText = '';
+    projectsArticles[0].classList.add('project-move0');
+    projectsArticles[1].classList.add('project-move1');
+    projectsArticles[2].classList.add('project-move2');
+    projectsArticles[3].classList.add('project-move3');
+    projectsArticles[4].classList.add('project-move4');
+    projectsArticles[5].style.display = 'none';
+  } else {
+    aboutmeBackground.style.height = '0';
+    projectsArticles[projectsArticles.length - 1].style.display = 'none';
+    for (let i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.add('hide-elem');
+      if (i < belt.length) {
+        belt[i].style.display = 'none';
+      }
     }
-    if (screen.width >= 1024) {
-      projectsArticles[i].style.width = '45%';
-    } else {
+    for (let i = 1; i < projectsArticles.length - 1; i++) {
+      if (i >= 4) {
+        projectsArticles[i].style.cssText = '';
+      }
       projectsArticles[i].style.width = '60%';
     }
-  }
-  if (screen.width >= 1024) {
-  } else {
     skills.classList.remove("show-elem");
     skills.classList.add("hide-elem");
     skillsBackground.style.height = '0';
@@ -69,8 +78,14 @@ menu[0].addEventListener('click', function () {
   skills.classList.add("show-elem");
   skills.classList.remove("hide-elem");
   aboutmeBackground.style.cssText = '';
-  for (let i = 0; i < belt.length; i++){
+  for (let i = 0; i < belt.length; i++) {
     belt[i].style.cssText = '';
+  }
+  for (let i = 1; i < projectsArticles.length; i++) {
+    projectsArticles[i].style.cssText = '';
+    if (i >= 4 && i < projectsArticles.length - 1) {
+      projectsArticles[i].style.display = 'none';
+    }
   }
   if (screen.width >= 1024) {
     if (aboutme[0].classList.contains("hide-elem")) {
@@ -89,28 +104,23 @@ menu[0].addEventListener('click', function () {
     projects.classList.remove("bg-projects");
     canvas.classList.remove("projects-and-canvas");
   } else {
-    for (let i = 1; i < projectsArticles.length; i++) {
-      projectsArticles[i].style.cssText = '';
-      if (i >= 4 && i < projectsArticles.length - 1) {
-        projectsArticles[i].style.display = 'none';
+
+    for (let i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.remove('hide-elem');
+      if (i < belt.length) {
+        belt[i].style.display = 'block';
       }
     }
-  }
-  for (let i = 0; i < aboutme.length; i++) {
-    aboutme[i].classList.remove('hide-elem');
-    if (i < belt.length) {
-      belt[i].style.display = 'block';
+    projectsBackground.style.cssText = '';
+    skillsBackground.style.cssText = '';
+    skills.classList.add("show-elem");
+    skills.classList.remove("hide-elem");
+    projects.classList.add("show-elem");
+    projects.classList.remove("hide-elem");
+    contactsSmall.classList.remove('blue-background');
+    for (let i = 0; i < contacts.length; i++) {
+      contactsElements[i].style.cssText = '';
     }
-  }
-  projectsBackground.style.cssText = '';
-  skillsBackground.style.cssText = '';
-  skills.classList.add("show-elem");
-  skills.classList.remove("hide-elem");
-  projects.classList.add("show-elem");
-  projects.classList.remove("hide-elem");
-  contactsSmall.classList.remove('blue-background');
-  for (let i = 0; i < contacts.length; i++) {
-    contactsElements[i].style.cssText = '';
   }
 })
 menu[1].addEventListener('click', function () {
@@ -130,6 +140,8 @@ menu[1].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  projectsBackground.style.cssText = '';
+
   if (screen.width >= 1024) {
     skillsBackground.classList.remove("blue-belt");
     projectsBackground.classList.add("blue-belt");
@@ -144,11 +156,23 @@ menu[1].addEventListener('click', function () {
       skills.classList.remove("show-elem");
       skills.classList.remove("skills-background");
     }
-    belt[0].classList.remove("belt-color1");
-    belt[0].classList.add("belt-color2");
+    for (var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.remove("show-elem");
+      aboutme[i].classList.add("hide-elem");
+    }
+    belt[0].classList.add("belt-color1");
+    belt[0].classList.remove("belt-color2");
     canvas.classList.remove("projects-and-canvas");
+
+    projectsArticles[0].classList.add('project-move0');
+    projectsArticles[1].classList.add('project-move1');
+    projectsArticles[2].classList.add('project-move2');
+    projectsArticles[3].classList.add('project-move3');
+    projectsArticles[4].classList.add('project-move4');
+    projectsArticles[5].style.display = 'none';
+
   } else {
-    for (let i = 0; i < belt.length; i++){
+    for (let i = 0; i < belt.length; i++) {
       belt[i].style.cssText = '';
     }
     for (let i = 0; i < aboutme.length; i++) {

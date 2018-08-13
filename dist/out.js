@@ -106,25 +106,35 @@ for (var i = 4; i < projectsArticles.length - 1; i++) {
 
 var menu = document.querySelectorAll('ul>li');
 seeMore.addEventListener('click', function () {
-  aboutmeBackground.style.height = '0';
-  projectsArticles[projectsArticles.length - 1].style.display = 'none';
-  for (var _i = 0; _i < aboutme.length; _i++) {
-    aboutme[_i].classList.add('hide-elem');
-    if (_i < belt.length) {
-      belt[_i].style.display = 'none';
+
+  if (screen.width >= 1024) {
+    belt[0].classList.remove("belt-color2");
+    belt[0].classList.add("belt-color1");
+    for (var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.remove("show-elem");
+      aboutme[i].classList.add("hide-elem");
     }
-  }
-  for (var _i2 = 1; _i2 < projectsArticles.length - 1; _i2++) {
-    if (_i2 >= 4) {
-      projectsArticles[_i2].style.cssText = '';
+    projectsArticles[0].classList.add('project-move0');
+    projectsArticles[1].classList.add('project-move1');
+    projectsArticles[2].classList.add('project-move2');
+    projectsArticles[3].classList.add('project-move3');
+    projectsArticles[4].classList.add('project-move4');
+    projectsArticles[5].style.display = 'none';
+  } else {
+    aboutmeBackground.style.height = '0';
+    projectsArticles[projectsArticles.length - 1].style.display = 'none';
+    for (var _i = 0; _i < aboutme.length; _i++) {
+      aboutme[_i].classList.add('hide-elem');
+      if (_i < belt.length) {
+        belt[_i].style.display = 'none';
+      }
     }
-    if (screen.width >= 1024) {
-      projectsArticles[_i2].style.width = '45%';
-    } else {
+    for (var _i2 = 1; _i2 < projectsArticles.length - 1; _i2++) {
+      if (_i2 >= 4) {
+        projectsArticles[_i2].style.cssText = '';
+      }
       projectsArticles[_i2].style.width = '60%';
     }
-  }
-  if (screen.width >= 1024) {} else {
     skills.classList.remove("show-elem");
     skills.classList.add("hide-elem");
     skillsBackground.style.height = '0';
@@ -155,11 +165,17 @@ menu[0].addEventListener('click', function () {
   for (var _i3 = 0; _i3 < belt.length; _i3++) {
     belt[_i3].style.cssText = '';
   }
+  for (var _i4 = 1; _i4 < projectsArticles.length; _i4++) {
+    projectsArticles[_i4].style.cssText = '';
+    if (_i4 >= 4 && _i4 < projectsArticles.length - 1) {
+      projectsArticles[_i4].style.display = 'none';
+    }
+  }
   if (screen.width >= 1024) {
     if (aboutme[0].classList.contains("hide-elem")) {
-      for (var _i4 = 0; _i4 < aboutme.length; _i4++) {
-        aboutme[_i4].classList.add("show-elem");
-        aboutme[_i4].classList.remove("hide-elem");
+      for (var _i5 = 0; _i5 < aboutme.length; _i5++) {
+        aboutme[_i5].classList.add("show-elem");
+        aboutme[_i5].classList.remove("hide-elem");
       }
     }
     belt[0].classList.remove("belt-color1");
@@ -172,28 +188,23 @@ menu[0].addEventListener('click', function () {
     projects.classList.remove("bg-projects");
     canvas.classList.remove("projects-and-canvas");
   } else {
-    for (var _i5 = 1; _i5 < projectsArticles.length; _i5++) {
-      projectsArticles[_i5].style.cssText = '';
-      if (_i5 >= 4 && _i5 < projectsArticles.length - 1) {
-        projectsArticles[_i5].style.display = 'none';
+
+    for (var _i6 = 0; _i6 < aboutme.length; _i6++) {
+      aboutme[_i6].classList.remove('hide-elem');
+      if (_i6 < belt.length) {
+        belt[_i6].style.display = 'block';
       }
     }
-  }
-  for (var _i6 = 0; _i6 < aboutme.length; _i6++) {
-    aboutme[_i6].classList.remove('hide-elem');
-    if (_i6 < belt.length) {
-      belt[_i6].style.display = 'block';
+    projectsBackground.style.cssText = '';
+    skillsBackground.style.cssText = '';
+    skills.classList.add("show-elem");
+    skills.classList.remove("hide-elem");
+    projects.classList.add("show-elem");
+    projects.classList.remove("hide-elem");
+    contactsSmall.classList.remove('blue-background');
+    for (var _i7 = 0; _i7 < contacts.length; _i7++) {
+      contactsElements[_i7].style.cssText = '';
     }
-  }
-  projectsBackground.style.cssText = '';
-  skillsBackground.style.cssText = '';
-  skills.classList.add("show-elem");
-  skills.classList.remove("hide-elem");
-  projects.classList.add("show-elem");
-  projects.classList.remove("hide-elem");
-  contactsSmall.classList.remove('blue-background');
-  for (var _i7 = 0; _i7 < contacts.length; _i7++) {
-    contactsElements[_i7].style.cssText = '';
   }
 });
 menu[1].addEventListener('click', function () {
@@ -213,6 +224,8 @@ menu[1].addEventListener('click', function () {
     contacts[3].classList.remove('contact-move4');
     contacts[3].classList.add('contact-move4-remove');
   }
+  projectsBackground.style.cssText = '';
+
   if (screen.width >= 1024) {
     skillsBackground.classList.remove("blue-belt");
     projectsBackground.classList.add("blue-belt");
@@ -227,9 +240,20 @@ menu[1].addEventListener('click', function () {
       skills.classList.remove("show-elem");
       skills.classList.remove("skills-background");
     }
-    belt[0].classList.remove("belt-color1");
-    belt[0].classList.add("belt-color2");
+    for (var i = 0; i < aboutme.length; i++) {
+      aboutme[i].classList.remove("show-elem");
+      aboutme[i].classList.add("hide-elem");
+    }
+    belt[0].classList.add("belt-color1");
+    belt[0].classList.remove("belt-color2");
     canvas.classList.remove("projects-and-canvas");
+
+    projectsArticles[0].classList.add('project-move0');
+    projectsArticles[1].classList.add('project-move1');
+    projectsArticles[2].classList.add('project-move2');
+    projectsArticles[3].classList.add('project-move3');
+    projectsArticles[4].classList.add('project-move4');
+    projectsArticles[5].style.display = 'none';
   } else {
     for (var _i8 = 0; _i8 < belt.length; _i8++) {
       belt[_i8].style.cssText = '';
