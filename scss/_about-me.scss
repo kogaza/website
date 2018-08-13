@@ -2,63 +2,82 @@
 
 .about-me {
   background-color: $background-color-1;
-  animation: about-me 0.5s linear both 3.5s;
   .small-width {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    animation: about-me 0.5s linear both 3.5s;
       article {
-        width: 40%;
-        height: 300px; 
-        font-size: 20px;
         text-align: center;
         padding: 3% 2%;
         color: $text-color-1;
       }
-    .text {
-      flex: 2;
-      padding-left: 0;
-      display: flex;
-      align-items: center;
-    }
-    p {
-      line-height: 25px;
+    .picture {
+      border-radius: 25%;
+      background: grey;
+      background-image: url('../images/cv.jpg');
+      background-size: cover;
     }
   }
-}
-@keyframes about-me {
-  0% {
-    transform: translate(0, 300px) scale(1);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0,0) scale(1);
-    opacity: 1;
-  }
-}
-.picture {
-  width: 75%;
-  height: 100%;
-  border-radius: 25%;
-  background: grey;
-  background-image: url('../images/cv.jpg');
-  background-size: cover;
 }
 @media screen and (max-width: 1024px) {
   .about-me {
     .small-width {
-      article {
-      width: 380px;
-      height: 300px; 
-      padding: 4%;
-      }
+      flex-direction: column;
+      align-items: center;
+        article {
+          text-align: center;
+          padding: 3% 2%;
+          color: $text-color-1;
+          font-size: 16px;
+
+        }
       .text {
-        font-size: 24px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
       }
-      p {
-        line-height: 30px;
+      .picture {
+        width: 100px;
+        height: 100px;
       }
     }
   }
 }
+@media screen and (min-width: 1025px) {
+  .about-me {
+    animation: about-me 0.5s linear both 3.5s;
+    .small-width {
+      flex-direction: row;
+      justify-content: space-around;
+      animation: about-me 0.5s linear both 3.5s;
+        article {
+          width: 40%;
+          height: 300px; 
+          font-size: 20px;
+          text-align: center;
+          padding: 3% 2%;
+          color: $text-color-1;
+        }
+      .text {
+        flex: 2;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+      }
+      .picture {
+        width: 270px;
+        height: 240px;
+      }
+    }
+  }
+  @keyframes about-me {
+    0% {
+      transform: translate(0, 300px) scale(1);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+}
+

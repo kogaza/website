@@ -1,38 +1,39 @@
 @import 'variables';
 
-.belt {
-  height: 40px;
-  animation: start-height 0.5s linear both 4s;
-}
-.belt3 {
-  display: none;
-}
-@keyframes start-height {
-  from {height: 0}
-  to {height: 40px}
-}
-.belt-color1 {
-  animation: belt-color1 0.5s linear forwards;
-}
-.belt-color2 {
-  animation: belt-color1 0.5s linear forwards reverse;
-}
-@keyframes belt-color1 {
-  from {background-color: $background-color-2}
-  to {background-color: $background-color-1}
-}
 @media screen and (max-width: 1023px) {
   .belt {
-    height: 35px;
-    animation: start-height 0.5s linear forwards;
+    height: 12px;
   }
-  @keyframes start-height {
-    from {height: 0}
-    to {height: 35px}
+  .belt-mobile {
+    height: 12px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .belt2 {
+  .belt {
+    height: 40px;
+    animation: start-height 0.5s linear both 4s;
+  }
+  .belt3 {
+    display: none;
+  }
+  @keyframes start-height {
+    from {height: 0}
+    to {height: 40px}
+  }
+  .belt-color1 {
+    animation: belt-color1 0.5s linear forwards;
+  }
+  .belt-color2 {
+    animation: belt-color1 0.5s linear forwards reverse;
+  }
+  @keyframes belt-color1 {
+    from {background-color: $background-color-2}
+    to {background-color: $background-color-1}
+  }
+  .belt2{
+    display: none;
+  }
+  .belt-mobile {
     display: none;
   }
 

@@ -1,5 +1,13 @@
 @import 'variables';
 
+@media screen and (max-width: 1024px) {
+  .projects {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
 .projects {
   display: flex;
   flex-direction: row;
@@ -114,7 +122,7 @@
   background-color: $background-color-1;
   height: 550px;
 }
-@media screen and (min-width: 1025px) {
+
   .project-move0 {
     animation: project-move0 1s linear forwards 0.1s;
   }

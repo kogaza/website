@@ -34,13 +34,7 @@ body {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
-@media screen and (max-width: 640px) {
-  .small-width {
-    max-width: 100%;
-    width: auto;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .small-width {
     max-width: 100%;
     width: auto;

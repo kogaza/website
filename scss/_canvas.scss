@@ -1,13 +1,13 @@
 @import 'variables';
 
-canvas {
-  animation: move-canvas 2s linear both 1.5s,
-             hide-canvas 3s linear both 1.5s;
-}
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   canvas {
     display: none;
   }
+}
+canvas {
+  animation: move-canvas 2s linear both 1.5s,
+             hide-canvas 3s linear both 1.5s;
 }
 @keyframes move-canvas {
   from {transform:translateX(-600px)}
