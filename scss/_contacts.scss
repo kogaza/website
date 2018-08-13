@@ -10,7 +10,29 @@
       font-size: 22px;
       text-align: center;
       transition: 2s;
+      &:nth-child(1) {
+        animation: mobile-contact-left 1s linear both;
+      }
+      &:nth-child(2) {
+        animation: mobile-contact-right 1s linear both 0.2s;
+      }
+      &:nth-child(3) {
+        animation: mobile-contact-left 1s linear both 0.4s;
+      }
+      &:nth-child(4) {
+        animation: mobile-contact-right 1s linear both 0.6s;
+      }
     }
+  }
+  @keyframes mobile-contact-left {
+    0% {transform: translateX(-500px)}
+    80% {transform: translateX(30px)}
+    100% {transform: translateX(0)}
+  }
+  @keyframes mobile-contact-right {
+    0% {transform: translateX(500px)}
+    80% {transform: translateX(-30px)}
+    100% {transform: translateX(0)}
   }
   a {
     background-color: $background-color-1;
