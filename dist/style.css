@@ -13,21 +13,40 @@
       background-size: cover; }
 
 @media screen and (max-width: 1024px) {
-  .about-me .small-width {
-    flex-direction: column;
-    align-items: center; }
-    .about-me .small-width article {
-      text-align: center;
-      padding: 3% 2%;
-      color: white;
-      font-size: 16px; }
-    .about-me .small-width .text {
-      padding-left: 0;
-      display: flex;
+  .about-me {
+    animation: mobile-aboutme 1s linear both; }
+    .about-me .small-width {
+      flex-direction: column;
       align-items: center; }
-    .about-me .small-width .picture {
-      width: 100px;
-      height: 100px; } }
+      .about-me .small-width article {
+        text-align: center;
+        padding: 3% 2%;
+        color: white;
+        font-size: 16px; }
+      .about-me .small-width .text {
+        padding-left: 0;
+        display: flex;
+        align-items: center; }
+      .about-me .small-width .picture {
+        width: 100px;
+        height: 100px; } }
+
+@keyframes mobile-aboutme {
+  0% {
+    transform: scale(0.2) translateX(-1000px) rotate(90deg);
+    border-radius: 50%; }
+  40% {
+    transform: scale(0.2) translateX(0) rotate(90deg);
+    border-radius: 50%; }
+  50% {
+    transform: scale(0.2) translateX(100px) rotate(60deg);
+    border-radius: 50%; }
+  60% {
+    transform: scale(0.2) translateX(-50px) rotate(30deg);
+    border-radius: 50%; }
+  100% {
+    transform: scale(1) translateX(0) rotate(0);
+    border-radius: 0; } }
 
 @media screen and (min-width: 1025px) {
   .about-me {
@@ -397,7 +416,16 @@ footer {
 @media screen and (max-width: 1024px) {
   footer {
     font-size: 10px;
-    padding: 10px; } }
+    padding: 10px;
+    animation: mobile-fotter 0.8s linear both 1s; } }
+
+@keyframes mobile-fotter {
+  from {
+    opacity: 0;
+    transform: translateY(-400px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @media screen and (min-width: 1025px) {
   footer {
@@ -425,7 +453,8 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    padding: 16px; }
+    padding: 16px;
+    animation: mobile-header 0.5s linear both 1s; }
     header .small-width {
       line-height: 13px; }
       header .small-width .title1 {
@@ -434,6 +463,14 @@ header {
         font-size: 14px; }
       header .small-width .title3 {
         font-size: 10px; } }
+
+@keyframes mobile-header {
+  from {
+    opacity: 0;
+    transform: translateY(100px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @media screen and (min-width: 1025px) {
   header {
@@ -452,6 +489,43 @@ header {
       transform: scale(0); }
     to {
       transform: scale(1); } } }
+
+@media screen and (max-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 18px;
+    right: 10px;
+    z-index: 20;
+    animation: mobile-nav 0.5s linear both 1.5s; }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+    nav li {
+      text-align: center;
+      background-color: blue;
+      width: 24px;
+      height: 4px;
+      margin: 1.5px;
+      color: rgba(255, 255, 255, 0);
+      font-size: 0;
+      transition: 0.5s; }
+  @keyframes mobile-nav {
+    from {
+      opacity: 0;
+      transform: translateX(-100px) rotate(90deg); }
+    to {
+      opacity: 1;
+      transform: translateX(0) rotate(0); } }
+  .nav-li {
+    width: 150px;
+    height: auto;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: 0.5s;
+    border-radius: 5px; } }
 
 @media screen and (min-width: 1025px) {
   nav ul {
@@ -514,34 +588,6 @@ header {
       color: #D2FFED; }
     100% {
       transform: translate(0, 0) scale(1); } } }
-
-@media screen and (max-width: 1024px) {
-  nav {
-    position: fixed;
-    top: 18px;
-    right: 10px;
-    z-index: 20; }
-    nav ul {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end; }
-    nav li {
-      text-align: center;
-      background-color: blue;
-      width: 24px;
-      height: 4px;
-      margin: 1.5px;
-      color: rgba(255, 255, 255, 0);
-      font-size: 0; }
-  .nav-li {
-    width: 150px;
-    height: auto;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    margin: 10px 0;
-    transition: 0.5s;
-    border-radius: 5px; } }
 
 .projects {
   display: flex;
@@ -750,10 +796,19 @@ header {
   .skills {
     padding-top: 10px;
     height: auto;
-    background-color: rgba(38, 125, 232, 0.6); }
+    background-color: rgba(38, 125, 232, 0.6);
+    animation: mobile-skills 0.5s linear both 1.3s; }
     .skills .small-width {
       font-size: 16px;
-      padding-bottom: 10px; } }
+      padding: 0 5px 10px 5px; } }
+
+@keyframes mobile-skills {
+  from {
+    opacity: 0;
+    transform: translateY(-200px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @media screen and (min-width: 1025px) {
   .skills {

@@ -19,6 +19,7 @@
 }
 @media screen and (max-width: 1024px) {
   .about-me {
+    animation: mobile-aboutme 1s linear both ;
     .small-width {
       flex-direction: column;
       align-items: center;
@@ -40,6 +41,44 @@
       }
     }
   }
+}
+@keyframes mobile-aboutme {
+  0% {
+    transform: 
+    scale(0.2) 
+    translateX(-1000px) 
+    rotate(90deg);
+    border-radius: 50%;
+  }
+  40% {
+    transform: 
+    scale(0.2) 
+    translateX(0) 
+    rotate(90deg);
+    border-radius: 50%
+  }
+  50% {
+    transform: 
+    scale(0.2) 
+    translateX(100px) 
+    rotate(60deg);
+    border-radius: 50%
+  }
+  60% {
+    transform: 
+    scale(0.2) 
+    translateX(-50px) 
+    rotate(30deg);
+    border-radius: 50%
+  }
+  100% {
+    transform: 
+    scale(1)
+    translateX(0) 
+    rotate(0);
+    border-radius: 0
+  }
+
 }
 @media screen and (min-width: 1025px) {
   .about-me {

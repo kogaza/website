@@ -51,9 +51,9 @@ function animateRectangle(
 export default function init() {
   height = window.innerHeight;
   width = window.innerWidth;
-  width < 1024 ? numberOfRectangles = 100 : numberOfRectangles = 200;
+  width < 1024 ? numberOfRectangles = 20 : numberOfRectangles = 200;
   for (let i = 0; i < numberOfRectangles; i++) {
-    let time = Math.round(Math.random() * 25000 + 25000);
+    let time = Math.round(Math.random() * 45000 + 5000);
     createRectangle(time);
   }
 }

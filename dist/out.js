@@ -214,7 +214,6 @@ if (screen.width >= 1024) {
     projectsArticles[5].style.display = 'none';
   });
   menu[2].addEventListener('click', function () {
-    // if (screen.width >= 1024) {
     canvas.classList.remove("projects-and-canvas");
     projects.classList.add("hide-elem");
     projects.classList.remove("show-elem");
@@ -288,124 +287,6 @@ if (screen.width >= 1024) {
   });
 }
 
-// if (screen.width >= 1024) {
-// } 
-// else {
-//   aboutmeBackground.style.height = '0';
-//   projectsArticles[projectsArticles.length - 1].style.display = 'none';
-//   for (let i = 0; i < aboutme.length; i++) {
-//     aboutme[i].classList.add('hide-elem');
-//     if (i < belt.length) {
-//       belt[i].style.display = 'none';
-//     }
-//   }
-//   for (let i = 1; i < projectsArticles.length - 1; i++) {
-//     if (i >= 4) {
-//       projectsArticles[i].style.cssText = '';
-//     }
-//     projectsArticles[i].style.width = '60%';
-//   }
-//   skills.classList.remove("show-elem");
-//   skills.classList.add("hide-elem");
-//   skillsBackground.style.height = '0';
-//   projectsArticles[0].style.fontSize = '40px';
-// }
-// if (screen.width >= 1024) {
-// } 
-// else {
-
-//   for (let i = 0; i < aboutme.length; i++) {
-//     aboutme[i].classList.remove('hide-elem');
-//     if (i < belt.length) {
-//       belt[i].style.display = 'block';
-//     }
-//   }
-//   projectsBackground.style.cssText = '';
-//   skillsBackground.style.cssText = '';
-//   skills.classList.add("show-elem");
-//   skills.classList.remove("hide-elem");
-//   projects.classList.add("show-elem");
-//   projects.classList.remove("hide-elem");
-//   contactsSmall.classList.remove('blue-background');
-//   for (let i = 0; i < contacts.length; i++) {
-//     contactsElements[i].style.cssText = '';
-//   }
-// }
-
-// if (screen.width >= 1024) {
-
-// } 
-// else {
-//   for (let i = 0; i < belt.length; i++) {
-//     belt[i].style.cssText = '';
-//   }
-//   for (let i = 0; i < aboutme.length; i++) {
-//     aboutme[i].classList.add('hide-elem');
-//     aboutme[i].classList.remove('show-elem');
-//     if (i < belt.length) {
-//       belt[i].style.display = 'none';
-//     }
-//   }
-//   for (let i = 1; i < projectsArticles.length - 1; i++) {
-//     if (i >= 4) {
-//       projectsArticles[i].style.cssText = '';
-//     }
-//     projectsArticles[i].style.width = '60%';
-//   }
-//   skillsBackground.style.height = '0';
-//   aboutmeBackground.style.height = '0';
-//   projectsBackground.style.cssText = '';
-//   projectsArticles[0].style.fontSize = '40px';
-//   projectsArticles[projectsArticles.length - 1].style.display = 'none';
-//   for (let i = 1; i < projectsArticles.length - 1; i++) {
-//     projectsArticles[i].style.width = '60%';
-//   }
-//   skills.classList.add("show-elem");
-//   skills.classList.remove("hide-elem");
-//   projects.classList.add("show-elem");
-//   projects.classList.remove("hide-elem");
-//   contactsSmall.classList.remove('blue-background');
-//   for (let i = 0; i < contacts.length; i++) {
-//     contactsElements[i].style.cssText = '';
-//   }
-// }
-
-// } 
-// else {
-//   for (let i = 0; i < aboutme.length; i++) {
-//     aboutme[i].classList.remove('hide-elem');
-//     if (i < belt.length) {
-//       belt[i].style.display = 'block';
-//     }
-//   }
-//   projectsBackground.style.height = '300px';
-//   skills.classList.add("show-elem");
-//   skills.classList.remove("hide-elem");
-//   skillsBackground.style.cssText = '';
-//   aboutmeBackground.style.cssText = '';
-//   for (let i = 1; i < projectsArticles.length; i++) {
-//     projectsArticles[i].style.cssText = '';
-//   }
-//   skills.classList.remove("show-elem");
-//   skills.classList.add("hide-elem");
-//   projects.classList.remove("show-elem");
-//   projects.classList.add("hide-elem");
-//   belt[1].style.display = 'none';
-//   belt[2].style.display = 'block';
-//   contactsSmall.classList.add('blue-background');
-//   for (let i = 0; i < contacts.length; i++) {
-//     contactsElements[i].style.width = '60%';
-//   }
-//   contacts[0].classList.remove('contact-move1-remove');
-//   contacts[0].classList.add('contact-move1');
-//   contacts[1].classList.remove('contact-move2-remove');
-//   contacts[1].classList.add('contact-move2');
-//   contacts[2].classList.remove('contact-move3-remove');
-//   contacts[2].classList.add('contact-move3');
-//   contacts[3].classList.remove('contact-move4-remove');
-//   contacts[3].classList.add('contact-move4');
-// }
-
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -462,9 +343,9 @@ function animateRectangle(rectangle, widthElement, heightElement, actualPosition
 function init() {
   height = window.innerHeight;
   width = window.innerWidth;
-  width < 1024 ? numberOfRectangles = 100 : numberOfRectangles = 200;
+  width < 1024 ? numberOfRectangles = 20 : numberOfRectangles = 200;
   for (var i = 0; i < numberOfRectangles; i++) {
-    var time = Math.round(Math.random() * 25000 + 25000);
+    var time = Math.round(Math.random() * 45000 + 5000);
     createRectangle(time);
   }
 }
