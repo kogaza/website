@@ -102,13 +102,15 @@ body {
     max-width: 100%;
     width: auto; } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .belt {
     height: 12px; }
+  .belt3 {
+    display: none; }
   .belt-mobile {
     height: 12px; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .belt {
     height: 40px;
     animation: start-height 0.5s linear both 4s; }
@@ -154,7 +156,22 @@ canvas {
 
 @media screen and (max-width: 1024px) {
   .contacts {
-    display: none; } }
+    display: none; }
+    .contacts .contacts-element {
+      margin: 45px auto;
+      width: 90%;
+      height: 60px;
+      font-size: 22px;
+      text-align: center;
+      transition: 2s; }
+  a {
+    background-color: rgba(38, 125, 232, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 0;
+    text-decoration: none;
+    color: white;
+    transition: 1s; } }
 
 @media screen and (min-width: 1025px) {
   .contacts .small-width {
@@ -370,114 +387,6 @@ canvas {
     to {
       background-color: rgba(38, 125, 232, 0.6); } } }
 
-@media screen and (max-width: 1024px) {
-  .contacts .contacts-element {
-    margin: 10px 0;
-    width: 40%;
-    height: 60px;
-    font-size: 24px; }
-  .contact-move1 {
-    animation: contact-move1 1s linear forwards 0.1s,  color-contacts 1s linear forwards; }
-  @keyframes contact-move1 {
-    0% {
-      height: 100%;
-      transform: translateY(0); }
-    100% {
-      height: 120px;
-      padding-top: 30px;
-      font-size: 30px;
-      transform: translateY(-700px); } }
-  .contact-move2 {
-    animation: contact-move2 1s linear forwards 0.1s,  color-contacts 1s linear forwards; }
-  @keyframes contact-move2 {
-    0% {
-      height: 100%;
-      transform: translateY(0); }
-    100% {
-      height: 120px;
-      padding-top: 30px;
-      font-size: 30px;
-      transform: translateY(-550px); } }
-  .contact-move3 {
-    animation: contact-move3 1s linear forwards 0.1s,  color-contacts 1s linear forwards; }
-  @keyframes contact-move3 {
-    0% {
-      height: 100%;
-      transform: translateY(0); }
-    100% {
-      height: 120px;
-      padding-top: 30px;
-      font-size: 30px;
-      transform: translateY(-400px); } }
-  .contact-move4 {
-    animation: contact-move4 1s linear forwards 0.1s,  color-contacts 1s linear forwards; }
-  @keyframes contact-move4 {
-    0% {
-      height: 100%;
-      transform: translateY(0); }
-    100% {
-      height: 120px;
-      padding-top: 30px;
-      font-size: 30px;
-      transform: translateY(-250px); } }
-  @keyframes color-contacts {
-    from {
-      background-color: rgba(38, 125, 232, 0.6);
-      color: white; }
-    to {
-      background-color: white;
-      color: rgba(38, 125, 232, 0.6); } }
-  .contact-move1-remove {
-    animation: contact-move1-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
-  @keyframes contact-move1-remove {
-    0% {
-      height: 120px;
-      transform: translateY(-700px); }
-    100% {
-      height: 100%;
-      padding-top: 0;
-      font-size: 24px;
-      transform: translateY(0); } }
-  .contact-move2-remove {
-    animation: contact-move2-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
-  @keyframes contact-move2-remove {
-    0% {
-      height: 120px;
-      transform: translateY(-550px); }
-    100% {
-      height: 100%;
-      padding-top: 0;
-      font-size: 24px;
-      transform: translateY(0); } }
-  .contact-move3-remove {
-    animation: contact-move3-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
-  @keyframes contact-move3-remove {
-    0% {
-      height: 120px;
-      transform: translateY(-400px); }
-    100% {
-      height: 100%;
-      padding-top: 0;
-      font-size: 24px;
-      transform: translateY(0); } }
-  .contact-move4-remove {
-    animation: contact-move4-remove 0.5s linear forwards,  color-contacts-back 0.5s linear forwards; }
-  @keyframes contact-move4-remove {
-    0% {
-      height: 120px;
-      transform: translateY(-250px); }
-    100% {
-      height: 100%;
-      padding-top: 0;
-      font-size: 24px;
-      transform: translateY(0); } }
-  @keyframes color-contacts-back {
-    from {
-      background-color: white;
-      color: rgba(38, 125, 232, 0.6); }
-    to {
-      background-color: rgba(38, 125, 232, 0.6); } } }
-
 footer {
   background-color: rgba(38, 125, 232, 0.6);
   display: flex;
@@ -634,9 +543,37 @@ header {
     transition: 0.5s;
     border-radius: 5px; } }
 
+.projects {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+  .projects .small-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: white; }
+  .projects article {
+    overflow: hidden;
+    margin: 1%;
+    border: 2px solid rgba(38, 125, 232, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s; }
+
 @media screen and (max-width: 1024px) {
   .projects {
-    display: none; } }
+    display: none;
+    background-color: rgba(38, 125, 232, 0.6); }
+    .projects article {
+      width: 60%; }
+      .projects article:nth-child(1) {
+        width: 100%;
+        text-align: center;
+        border: 0;
+        cursor: auto; }
+      .projects article:last-child {
+        display: none; } }
 
 @media screen and (min-width: 1025px) {
   .projects {

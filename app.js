@@ -1,5 +1,4 @@
 import rectangle from './rectangle'
-import { format } from 'url';
 
 const projectsBackground = document.querySelector('.projects');
 const projects = document.querySelector('.projects .small-width');
@@ -128,7 +127,6 @@ if (screen.width >= 1024) {
     projectsArticles[5].style.display = 'none';
   })
   menu[2].addEventListener('click', function () {
-    // if (screen.width >= 1024) {
     canvas.classList.remove("projects-and-canvas");
     projects.classList.add("hide-elem");
     projects.classList.remove("show-elem");
@@ -152,7 +150,7 @@ if (screen.width >= 1024) {
     contacts[3].classList.add('contact-move4');
   })
 } else { //width < 1024
-  
+
   const menu = document.querySelector('nav');
   const navLi = menu.querySelectorAll('li');
   menu.addEventListener('click', function () {
@@ -164,16 +162,45 @@ if (screen.width >= 1024) {
       }
     }
   })
-  for (let i = 0; i < navLi.length; i++) {
-    navLi[i].addEventListener('click', function () {
-      if (navLi[i].classList.contains('nav-li')) {
-        console.log(navLi[i]);
-
+  navLi[0].addEventListener('click', function () {
+    if (navLi[0].classList.contains('nav-li')) {
+      aboutmeBackground.style.cssText = '';
+      skillsBackground.style.cssText = '';
+      projectsBackground.style.cssText = '';
+      contactsBackground.style.cssText = '';
+      for(let i = 0; i < 4; i++) {
+        belt[i].style.cssText = '';
       }
+    }
+  })
+  navLi[1].addEventListener('click', function () {
+    if (navLi[1].classList.contains('nav-li')) {
+      contactsBackground.style.cssText = '';
+      aboutmeBackground.style.display = 'none';
+      skillsBackground.style.display = 'none';
+      projectsBackground.style.display = 'block';
+      belt[0].style.display = 'none';
+      belt[1].style.display = 'none';
+      belt[2].style.display = 'block';
 
-    })
-  }
+    }
+  })
+  navLi[2].addEventListener('click', function () {
+    if (navLi[2].classList.contains('nav-li')) {
+      aboutmeBackground.style.display = 'none';
+      skillsBackground.style.display = 'none';
+      projectsBackground.style.display = 'none';
+      contactsBackground.style.display = 'block';
+      for(let i = 0; i < 4; i++) {
+        belt[i].style.display = 'none';
+      }
+    }
+  })
+
+
 }
+
+
 
     // if (screen.width >= 1024) {
       // } 

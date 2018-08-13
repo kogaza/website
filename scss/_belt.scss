@@ -1,14 +1,17 @@
 @import 'variables';
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .belt {
     height: 12px;
+  }
+  .belt3 {
+    display: none;
   }
   .belt-mobile {
     height: 12px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .belt {
     height: 40px;
     animation: start-height 0.5s linear both 4s;
