@@ -707,10 +707,10 @@ header {
         cursor: pointer; }
       .projects article:last-child a:hover {
         color: #FFEC0D; }
-    .projects a {
+    .projects img {
       transition: 1s; }
-      .projects a:hover {
-        transform: scale(1.5);
+      .projects img:hover {
+        transform: scale(1.2);
         transition: 0.5s; }
     .projects h2 {
       animation: my-projects 0.3s linear both 4s; }
