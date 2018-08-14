@@ -59,9 +59,11 @@
     justify-content: space-around;
   }
   .contacts-element {
+    
+    text-align: center;
+    border-radius: 5px;
     width: 22%;
     height: 50px;
-    text-align: center;
     transition: 2s;
     &:nth-child(1) {
       animation: contacts1 1s linear both 3.5s;
@@ -78,7 +80,11 @@
   }
   a {
     background-color: $background-color-1;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     padding: 5px 0;
     text-decoration: none;
@@ -92,7 +98,7 @@
   }
 }
 .blue-background {
-  background-color: $background-color-1;
+  // background-color: $background-color-1;
   margin: 0 !important;
   height: 120%;
 }
@@ -376,3 +382,4 @@
   to {background-color: $background-color-1}
   }
 }
+
