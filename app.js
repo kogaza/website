@@ -185,6 +185,7 @@ if (screen.width >= 1024) {
       belt[0].style.display = 'none';
       belt[1].style.display = 'none';
       belt[2].style.display = 'block';
+      beltMobile.style.cssText = '';
 
     }
   })

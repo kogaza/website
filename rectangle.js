@@ -53,7 +53,7 @@ export default function init() {
   width = window.innerWidth;
   width < 1024 ? numberOfRectangles = 20 : numberOfRectangles = 200;
   for (let i = 0; i < numberOfRectangles; i++) {
-    let time = Math.round(Math.random() * 45000 + 5000);
+    let time = Math.round(Math.random() * 35000 + 15000);
     createRectangle(time);
   }
 }

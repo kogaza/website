@@ -80,8 +80,6 @@
 
 * {
   box-sizing: border-box;
-  content: '';
-  display: block;
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif; }
@@ -182,6 +180,11 @@ canvas {
       height: 60px;
       font-size: 22px;
       text-align: center;
+      background-color: rgba(38, 125, 232, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
       transition: 2s; }
       .contacts .contacts-element:nth-child(1) {
         animation: mobile-contact-left 1s linear both; }
@@ -206,10 +209,9 @@ canvas {
     100% {
       transform: translateX(0); } }
   a {
-    background-color: rgba(38, 125, 232, 0.6);
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
-    padding: 5px 0;
     text-decoration: none;
     color: white;
     transition: 1s; } }
@@ -524,6 +526,7 @@ header {
       flex-direction: column;
       align-items: flex-end; }
     nav li {
+      list-style-type: none;
       text-align: center;
       background-color: blue;
       width: 24px;
@@ -554,6 +557,7 @@ header {
     display: flex;
     justify-content: center; }
   nav li {
+    list-style-type: none;
     background-color: rgba(38, 125, 232, 0.6);
     text-align: center;
     color: white;
@@ -829,7 +833,8 @@ header {
   justify-content: space-around; }
 
 .skills .small-width li {
-  width: 40%; }
+  width: 40%;
+  list-style-type: none; }
 
 @media screen and (max-width: 1024px) {
   .skills {

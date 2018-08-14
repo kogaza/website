@@ -13,6 +13,7 @@
       align-items: flex-end;
     }
     li {
+      list-style-type: none;
       text-align: center;
       background-color: blue;
       width: 24px;
@@ -45,6 +46,7 @@
       justify-content: center;
     }
     li {
+      list-style-type: none;
       background-color: $background-color-1;
       text-align: center;
       color: $text-color-1;

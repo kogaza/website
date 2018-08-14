@@ -271,6 +271,7 @@ if (screen.width >= 1024) {
       belt[0].style.display = 'none';
       belt[1].style.display = 'none';
       belt[2].style.display = 'block';
+      beltMobile.style.cssText = '';
     }
   });
   navLi[2].addEventListener('click', function () {
@@ -345,7 +346,7 @@ function init() {
   width = window.innerWidth;
   width < 1024 ? numberOfRectangles = 20 : numberOfRectangles = 200;
   for (var i = 0; i < numberOfRectangles; i++) {
-    var time = Math.round(Math.random() * 45000 + 5000);
+    var time = Math.round(Math.random() * 35000 + 15000);
     createRectangle(time);
   }
 }
